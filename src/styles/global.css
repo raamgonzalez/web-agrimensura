@@ -1,1 +1,35 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: oklch(0.95 0.005 240); /* #ECF0F1 - Light gray background */
+  --foreground: oklch(0.35 0.05 240); /* #34495E - Dark blue-gray for text */
+  --primary: #4C4D4C;
+  --muted-foreground: oklch(0.55 0.03 120); /* #7D8471 - Green-gray for muted text */
+  --accent: oklch(0.65 0.15 45); /* #D35400 - Orange accent color */
+  --font-dm-sans: "Geist"; /* DM Sans font family for professional typography */
+}
+
+@theme inline {
+  /* Text colors */
+  --text-primary: var(--primary);
+  --text-secondary: var(--foreground);
+  --text-accent: var(--accent);
+
+  /* Background colors */
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted-foreground);
+
+  /* Font */
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+}
+@layer base {
+  * {
+
+  }
+  body {
+    @apply bg-background font-sans;
+  }
+}
