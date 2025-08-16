@@ -1,3 +1,9 @@
+---
+import { Image } from 'astro:assets';
+import logoGray from '../assets/logo/logo_gray.png';
+const { loading } = Astro.props;
+---
+
 <a href="/" class="flex items-center">
-  <img src="/logo/logo_gray.png" alt="DGA Agrimensura" class="h-28 w-auto" />
+  <Image src={logoGray} alt="DGA Agrimensura" class="h-32 w-auto" loading={loading} />
 </a>

@@ -4,30 +4,53 @@
 @source "../../node_modules/preline/dist/*.js";
 
 :root {
-  --background: oklch(0.95 0.005 240); /* #ECF0F1 - Light gray background */
-  --foreground: oklch(0.35 0.05 240); /* #34495E - Dark blue-gray for text */
+  --background: oklch(0.95 0.005 240);
+  --foreground: oklch(0.35 0.05 240);
   --primary: #4c4d4c;
-  --muted-foreground: oklch(0.55 0.03 120); /* #7D8471 - Green-gray for muted text */
-  --accent: oklch(0.65 0.15 45); /* #D35400 - Orange accent color */
-  --font-geist: 'Geist Variable'; /* DM Sans font family for professional typography */
+  --muted-foreground: oklch(0.55 0.03 120);
+  --accent: oklch(0.65 0.15 45);
+  --font-geist: 'Geist Variable';
   --font-inter: 'Inter Variable';
+
+  --title-web: 1.875rem; /* 30px */
+  --title-tablet: 1.5rem; /* 24px */
+  --title-mobile: 1.25rem; /* 20px */
+
+  --desc-web: 1.125rem; /* 18px */
+  --desc-tablet: 1rem; /* 16px */
+  --desc-mobile: 0.875rem; /* 14px */
+
+  --gap-web: 4rem; /* 64px → gap-16 */
+  --gap-tablet: 2rem; /* 32px → gap-8 */
+  --gap-mobile: 1rem; /* 16px → gap-4 */
 }
 
 @theme inline {
-  /* Text colors */
-  --text-primary: var(--primary);
-  --text-secondary: var(--foreground);
-  --text-accent: var(--accent);
-
-  /* Background colors */
+  /* Colors */
   --color-background: var(--background);
   --color-primary: var(--primary);
   --color-accent: var(--accent);
+  --color-secondary: var(--foreground);
   --color-muted: var(--muted-foreground);
 
   /* Font */
   --font-geist: var(--font-geist), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
+
+  /* Tipografía Titles */
+  --text-title-web: var(--title-web);
+  --text-title-tablet: var(--title-tablet);
+  --text-title-mobile: var(--title-mobile);
+
+  /* Tipografía Descriptions */
+  --text-desc-web: var(--desc-web);
+  --text-desc-tablet: var(--desc-tablet);
+  --text-desc-mobile: var(--desc-mobile);
+
+  /* Gaps */
+  --gap-web: 4rem; /* 64px → gap-16 */
+  --gap-tablet: 2rem; /* 32px → gap-8 */
+  --gap-mobile: 1rem; /* 16px → gap-4 */
 }
 @layer base {
   * {

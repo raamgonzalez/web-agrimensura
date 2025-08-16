@@ -1,0 +1,70 @@
+---
+export interface Props {
+  content: string;
+  subcontent: string;
+  contentColor?: string;
+  hoverColor?: string;
+}
+
+const {
+  content,
+  subcontent,
+  contentColor = 'text-orange-500',
+  hoverColor = 'hover:bg-muted',
+} = Astro.props;
+---
+
+<div
+  class={`
+  group relative overflow-hidden
+  bg-primary/10 rounded-xl p-8
+  border border-gray-200
+  transition-all duration-300 ease-in-out
+  hover:shadow-xl hover:shadow-gray-200/50
+  hover:-translate-y-2 hover:scale-105
+  ${hoverColor}
+  cursor-pointer
+  flex flex-col items-center justify-center
+`}
+>
+  <!-- Background hover effect -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
+  </div>
+
+  <!-- Content container -->
+  <div class="relative z-10 text-center">
+    <!-- Main content -->
+    <div
+      class={`
+      text-6xl font-bold mb-4
+      ${contentColor}
+      transition-all duration-300
+      group-hover:scale-110
+      group-hover:text-orange-600
+    `}
+    >
+      {content}
+    </div>
+
+    <!-- Subcontent -->
+    <div
+      class="text-gray-600 text-sm font-medium
+      transition-all duration-300
+      group-hover:text-gray-800
+      group-hover:translate-y-1"
+    >
+      {subcontent}
+    </div>
+  </div>
+
+  <!-- Decorative elements that appear on hover -->
+  <!-- <div
+    class="absolute top-4 right-4 w-2 h-2 bg-orange-300 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-150"
+  >
+  </div>
+  <div
+    class="absolute bottom-4 left-4 w-1 h-1 bg-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-200"
+  > -->
+</div>

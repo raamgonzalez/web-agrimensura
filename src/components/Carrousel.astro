@@ -1,30 +1,37 @@
 ---
+import { Image } from 'astro:assets';
 import { data } from '../data/data';
-
+import ChipProyecto from '../ui/ChipProyecto.astro';
 const { projects } = data;
 ---
 
 <div
   data-hs-carousel='{
     "loadingClasses": "opacity-0",
-    "dotsItemClasses": "hs-carousel-active:bg-accent hs-carousel-active:border-accent size-3 border border-primary rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-accent dark:hs-carousel-active:border-accent mb-8",
+    "dotsItemClasses": "hs-carousel-active:bg-accent hs-carousel-active:border-accent size-3 border border-primary rounded-full cursor-pointer dark:border-primary dark:hs-carousel-active:bg-secondary dark:hs-carousel-active:border-primary mb-2",
     "isAutoPlay": true
   }'
   class="relative"
 >
-  <div class="hs-carousel relative overflow-hidden w-full h-[900px] rounded-lg">
+  <div
+    class="hs-carousel relative overflow-hidden w-full xl:h-[900px] md:h-[600px] sm:h-[400px] h-[300px] rounded-md"
+  >
     <div
       class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0"
     >
       {
         projects.map((project) => {
           return (
-            <div class="hs-carousel-slide">
-              <div class="flex justify-center h-full px-4">
-                {/* <span class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white">
-                  {project.name}
-                </span> */}
-                <img class="w-full rounded-4xl" src={project.src} />
+            <div class="hs-carousel-slide relative">
+              <ChipProyecto name={project.name} />
+              <div class="flex justify-center h-full">
+                <Image
+                  src={project.src}
+                  class="w-full rounded-4xl"
+                  alt={project.alt}
+                  inferSize={true}
+                  loading="eager"
+                />
               </div>
             </div>
           );
@@ -35,10 +42,10 @@ const { projects } = data;
 
   <button
     type="button"
-    class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-11.5 h-full focus:outline-hidden rounded-s-lg pl-16"
+    class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-11.5 h-full focus:outline-hidden rounded-s-lg pl-8"
   >
     <span
-      class="text-2xl text-primary bg-muted/30 p-4 rounded-md cursor-pointer"
+      class="text-2xl text-background bg-muted/30 p-2 sm:p-4 rounded-md cursor-pointer"
       aria-hidden="true"
     >
       <svg
@@ -59,11 +66,11 @@ const { projects } = data;
   </button>
   <button
     type="button"
-    class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-11.5 h-full focus:outline-hidden rounded-e-lg pr-16"
+    class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-11.5 h-full focus:outline-hidden rounded-e-lg pr-8"
   >
     <span class="sr-only">Next</span>
     <span
-      class="text-2xl text-primary bg-muted/30 p-4 rounded-md cursor-pointer"
+      class="text-2xl text-background bg-muted/30 p-2 sm:p-4 rounded-md cursor-pointer"
       aria-hidden="true"
     >
       <svg
