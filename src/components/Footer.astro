@@ -1,3 +1,59 @@
+---
+import Logo from '../ui/Logo.astro';
+import { data } from '../data/data';
+
+const { contact } = data;
+
+console.log(contact);
+---
+
 <footer>
-  <h2>Soy un footer</h2>
+  <div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <!-- Logo gris para footer -->
+      <div class="flex justify-center md:justify-start">
+        <Logo />
+      </div>
+
+      <!-- Información de la empresa -->
+      <div class="text-center">
+        <h3 class="text-lg font-semibold mb-2">DGA Agrimensura</h3>
+        <p class="text-sm">
+          Servicios profesionales de agrimensura<br />
+          Precisión y confianza en cada proyecto
+        </p>
+      </div>
+
+      <!-- Redes sociales con iconos SVG -->
+      <div class="flex justify-center md:justify-end space-x-4">
+        {
+          contact.networks.map((network) => {
+            return (
+              <a
+                href={network.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                aria-label={network.name}
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill={network.icon.fill}
+                  stroke={network.icon.stroke}
+                  viewBox="0 0 24 24"
+                >
+                  <path d={network.icon.path} />
+                </svg>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t mt-8 pt-8 text-center border-muted">
+      <p class="text-sm">© 2024 DGA Agrimensura. Todos los derechos reservados.</p>
+    </div>
+  </div>
 </footer>
