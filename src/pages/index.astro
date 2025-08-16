@@ -1,11 +1,18 @@
 ---
-import Hero from '../components/Hero.astro';
+import Carrousel from '../components/Carrousel.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <main class="h-screen">
-    <Hero />
+  <main class="flex flex-col gap-16">
+    <Carrousel />
+    <div class="flex flex-col gap-4 w-[600px] text-bold">
+      <h2 class="text-secondary">Nosotros</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi fuga temporibus minima,
+        tempore enim, nisi aliquid, pariatur saepe repellat explicabo velit maxime aliquam
+        reiciendis? Autem expedita officiis suscipit sit adipisci!
+      </p>
+    </div>
   </main>
 </Layout>
-|

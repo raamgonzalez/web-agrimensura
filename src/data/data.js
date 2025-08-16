@@ -1,5 +1,12 @@
 export const data = {
-  projects: [{}],
+  projects: [
+    {
+      name: 'Planialtimetria',
+      src: '/images/01.png',
+    },
+    { name: 'Curvas de nivel', src: '/images/02.png' },
+    { name: 'Montaje esración', src: '/images/03.png' },
+  ],
   services: [{}],
   about: {
     name: 'Diego Gonzalez Arbizu',

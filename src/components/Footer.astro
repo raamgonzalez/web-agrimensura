@@ -3,8 +3,6 @@ import Logo from '../ui/Logo.astro';
 import { data } from '../data/data';
 
 const { contact } = data;
-
-console.log(contact);
 ---
 
 <footer>
@@ -25,7 +23,7 @@ console.log(contact);
       </div>
 
       <!-- Redes sociales con iconos SVG -->
-      <div class="flex justify-center md:justify-end space-x-4">
+      <div class="flex justify-center md:justify-end gap-4">
         {
           contact.networks.map((network) => {
             return (
@@ -53,7 +51,7 @@ console.log(contact);
 
     <!-- Copyright -->
     <div class="border-t mt-8 pt-8 text-center border-muted">
-      <p class="text-sm">© 2024 DGA Agrimensura. Todos los derechos reservados.</p>
+      <p class="text-sm font-inter">© 2024 DGA Agrimensura. Todos los derechos reservados.</p>
     </div>
   </div>
 </footer>
