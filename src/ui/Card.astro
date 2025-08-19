@@ -10,7 +10,7 @@ const {
   content,
   subcontent,
   contentColor = 'text-orange-500',
-  hoverColor = 'hover:bg-muted',
+  hoverColor = 'hover:bg-backgrund',
 } = Astro.props;
 ---
 
@@ -60,11 +60,12 @@ const {
   </div>
 
   <!-- Decorative elements that appear on hover -->
-  <!-- <div
+  <div
     class="absolute top-4 right-4 w-2 h-2 bg-orange-300 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-150"
   >
   </div>
   <div
     class="absolute bottom-4 left-4 w-1 h-1 bg-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-200"
-  > -->
+  >
+  </div>
 </div>

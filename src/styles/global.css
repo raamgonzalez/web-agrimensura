@@ -21,8 +21,8 @@
   --desc-mobile: 0.875rem; /* 14px */
 
   --gap-web: 4rem; /* 64px → gap-16 */
-  --gap-tablet: 2rem; /* 32px → gap-8 */
-  --gap-mobile: 1rem; /* 16px → gap-4 */
+  --gap-tablet: 3rem; /* 32px → gap-8 */
+  --gap-mobile: 2rem; /* 16px → gap-4 */
 }
 
 @theme inline {
@@ -48,9 +48,9 @@
   --text-desc-mobile: var(--desc-mobile);
 
   /* Gaps */
-  --gap-web: 4rem; /* 64px → gap-16 */
-  --gap-tablet: 2rem; /* 32px → gap-8 */
-  --gap-mobile: 1rem; /* 16px → gap-4 */
+  --gap-web: var(--gap-web);
+  --gap-tablet: var(--gap-tablet);
+  --gap-mobile: var(--gap-mobile);
 }
 @layer base {
   * {

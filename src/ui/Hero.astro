@@ -1,0 +1,11 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/images/01.png';
+---
+
+<Image
+  class="w-full xl:h-[900px] md:h-[600px] sm:h-[400px] h-[300px]"
+  src={heroImage}
+  loading="eager"
+  alt="Prueba"
+/>

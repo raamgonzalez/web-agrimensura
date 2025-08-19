@@ -9,20 +9,20 @@ const { about } = data;
 ---
 
 <div class="flex flex-col gap-8">
-  <TitleAndText title="Nosotros" description={about.description} />
+  <TitleAndText title="Nosotros" description={about.description} margin="md:ml-4" />
   <section class="flex flex-col justify-between gap-8 sm:flex-row">
-    <div class="grid grid-cols-2 grid-rows-2 gap-4 ml-8">
+    <div class="grid grid-cols-2 grid-rows-2 gap-4 md:ml-4">
       <StadisticCards />
     </div>
     <div class="flex flex-col gap-8 sm:flex-row">
       <TitleAndText title={about.profile.name} description={about.profile.notes} />
       <Image
-        class="object-center object-cover rounded-sm md:w-[440px] w-full md:h-[440px] h-[300px]"
         src={about.profile.src}
-        loading="lazy"
         alt={about.profile.name}
-        height="300"
-        width="300"
+        widths={[320, 440, 640, 960]}
+        sizes="(max-width: 640px) 100vw, 440px"
+        class="rounded-sm object-cover object-center w-full-[300px] md:w-[440px] md:h-[440px]"
+        loading="lazy"
       />
     </div>
   </section>

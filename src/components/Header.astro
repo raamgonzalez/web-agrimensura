@@ -1,5 +1,6 @@
 ---
 import Logo from '../ui/Logo.astro';
+import NavLinks from './NavLinks.astro';
 
 const links = [
   { name: 'Nosotros', url: '/nosotros', typeButton: false },
@@ -15,27 +16,8 @@ const links = [
       <Logo loading="eager" />
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-8">
-        {
-          links.map((link) => {
-            return link.typeButton ? (
-              <a
-                href={link.url}
-                class="bg-primary text-background px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium"
-              >
-                {link.name}
-              </a>
-            ) : (
-              <a
-                href={link.url}
-                class="text-secondary hover:text-accent transition-colors duration-200 font-medium"
-              >
-                {link.name}
-              </a>
-            );
-          })
-        }
+        <NavLinks />
       </nav>
-
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-button"
@@ -59,26 +41,10 @@ const links = [
 
     <!-- Mobile Navigation Menu -->
     <div id="mobile-menu" class="md:hidden hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        {
-          links.map((link) => {
-            return link.typeButton ? (
-              <a
-                href={link.url}
-                class="block px-3 py-2 bg-primary text-background rounded-md hover:bg-primary/90 transition-colors duration-200 font-medium text-center"
-              >
-                {link.name}
-              </a>
-            ) : (
-              <a
-                href={link.url}
-                class="block px-3 py-2  text-foreground hover:text-accent hover:bg-muted rounded-md transition-colors duration-200 font-medium"
-              >
-                {link.name}
-              </a>
-            );
-          })
-        }
+      <div
+        class="px-2 pt-2 pb-3 space-y-1 flex flex-col gap-4 bg-background rounded-b-xl shadow-lg"
+      >
+        <NavLinks />
       </div>
     </div>
   </div>
@@ -89,6 +55,18 @@ const links = [
   const menu = document.getElementById('mobile-menu');
 
   if (btn && menu) {
-    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation(); // evita que el click cierre el menú enseguida
+      menu.classList.toggle('hidden');
+    });
+
+    // Si hago click en cualquier lado fuera del menú y del botón → se cierra
+    document.addEventListener('click', (e) => {
+      if (!menu.classList.contains('hidden')) {
+        if (!menu.contains(e.target) && !btn.contains(e.target)) {
+          menu.classList.add('hidden');
+        }
+      }
+    });
   }
 </script>

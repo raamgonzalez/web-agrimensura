@@ -1,25 +1,28 @@
 ---
-const links = [{name: 'Nosotros', url: '/about'}, {name: 'Proyectos', url: '/projects'},  {name: 'Contacto', url: '/contact'}]
+const links = [
+  { name: 'Nosotros', url: '#about', typeButton: false },
+  { name: 'Servicios', url: '#services', typeButton: false },
+  { name: 'Proyectos', url: '#projects', typeButton: false },
+  { name: 'Contacto', url: '#contact', typeButton: true },
+];
 ---
 
-
- <nav class="hidden md:flex items-center space-x-8">
-        <a 
-          href="/nosotros" 
-          class="text-foreground hover:text-secondary transition-colors duration-200 font-medium"
-        >
-          Nosotros
-        </a>
-        <a 
-          href="/proyectos" 
-          class="text-foreground hover:text-secondary transition-colors duration-200 font-medium"
-        >
-          Proyectos
-        </a>
-        <a 
-          href="/contacto" 
-          class="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium"
-        >
-          Contacto
-        </a>
-</nav>
+{
+  links.map((link) => {
+    return link.typeButton ? (
+      <button
+        type="button"
+        class="px-6 py-2 rounded-lg bg-accent flex justify-center items-center gap-x-2 text-sm font-medium border border-transparent  text-white hover:bg-muted focus:outline-hidden focus:bg-gray-600 disabled:opacity-50 disabled:pointer-events-none cursor-pointer transition-colors duration-200 shadow-2xl shadow-accent text-center"
+      >
+        <a href={link.url}>{link.name}</a>
+      </button>
+    ) : (
+      <a
+        href={link.url}
+        class="text-center text-secondary hover:text-accent transition-colors duration-200 font-medium"
+      >
+        {link.name}
+      </a>
+    );
+  })
+}

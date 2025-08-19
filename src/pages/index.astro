@@ -1,34 +1,26 @@
 ---
-import Carrousel from '../components/Carrousel.astro';
 import Layout from '../layouts/Layout.astro';
-import TitleAndText from '../ui/TitleAndText.astro';
+import Hero from '../ui/Hero.astro';
 import About from './about.astro';
+import Projects from './projects.astro';
+import Services from './services.astro';
 
-import { data } from '../data/data';
-
-const { services } = data;
+const marginTopNavigation = 'scroll-mt-20';
 ---
 
 <Layout>
   <main class="flex flex-col gap-mobile sm:gap-tablet md:gap-web">
-    <Carrousel />
-    <About />
-    <section class="flex flex-col gap-8">
-      <TitleAndText title="Servicios" />
-      <div class="flex flex-col gap-8 ml-8">
-        {
-          services.map((service) => (
-            <div class="flex flex-row gap-4">
-              <h3 class="font-semibold text-gray-800 w-64">{service.name}</h3>
-              {service.service.map((dataService) => (
-                <span class="border b-background text-primary text-sm px-2 py-1 rounded-full">
-                  {dataService}
-                </span>
-              ))}
-            </div>
-          ))
-        }
-      </div>
-    </section>
+    <div id="init" class={marginTopNavigation}>
+      <Hero />
+    </div>
+    <div id="about" class={marginTopNavigation}>
+      <About />
+    </div>
+    <div id="services" class={marginTopNavigation}>
+      <Services />
+    </div>
+    <div id="projects" class={marginTopNavigation}>
+      <Projects />
+    </div>
   </main>
 </Layout>

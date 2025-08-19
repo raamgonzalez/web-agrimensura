@@ -1,5 +1,5 @@
 ---
-const { title, description } = Astro.props;
+const { title, description, margin } = Astro.props;
 ---
 
 <section class="w-full max-w-2xl">
@@ -10,7 +10,9 @@ const { title, description } = Astro.props;
   </h2>
   {
     description ? (
-      <p class="font-inter text-desc-mobile sm:text-desc-tablet md:text-desc-web ml-8">
+      <p
+        class={`font-inter text-desc-mobile sm:text-desc-tablet md:text-desc-web ${margin ?? null}`}
+      >
         {description}
       </p>
     ) : null
