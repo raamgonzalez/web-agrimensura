@@ -1,0 +1,39 @@
+name: 🚀 Deploy a DonWeb
+
+on:
+  push:
+    branches:
+      - main # o "master", según la rama principal de tu repo
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clonar el repo
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Instalar Node
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # Astro soporta Node 18+, mejor usar 20
+
+      # 3. Instalar dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Compilar Astro
+      - name: Build Astro site
+        run: npm run build
+
+      # 5. Subir por FTP a DonWeb
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist
+          server-dir: public_html
