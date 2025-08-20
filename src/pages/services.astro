@@ -9,7 +9,7 @@ const { services } = data;
   <TitleAndText title="Servicios" />
   <div class="flex flex-col gap-8 md:ml-4">
     {
-      services.map((service, serviceIndex) => (
+      services.map((service) => (
         <div class="flex flex-col md:flex-row gap-4 md:items-center">
           <h3 class="font-semibold text-secondary md:w-64">{service.name}</h3>
           <div class="flex flex-wrap gap-2">

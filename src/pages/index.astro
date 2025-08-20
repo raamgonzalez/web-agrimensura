@@ -1,9 +1,11 @@
 ---
+import ContactForm from '@/components/ContactForm.astro';
 import Layout from '../layouts/Layout.astro';
 import Hero from '../ui/Hero.astro';
 import About from './about.astro';
 import Projects from './projects.astro';
 import Services from './services.astro';
+import ContactIcon from '@/ui/ContactIcon.astro';
 
 const marginTopNavigation = 'scroll-mt-20';
 ---
@@ -22,5 +24,9 @@ const marginTopNavigation = 'scroll-mt-20';
     <div id="projects" class={marginTopNavigation}>
       <Projects />
     </div>
+    <div id="contact" class={marginTopNavigation}>
+      <ContactForm />
+    </div>
+    <ContactIcon />
   </main>
 </Layout>

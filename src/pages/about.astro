@@ -19,9 +19,9 @@ const { about } = data;
       <Image
         src={about.profile.src}
         alt={about.profile.name}
-        widths={[320, 440, 640, 960]}
-        sizes="(max-width: 640px) 100vw, 440px"
-        class="rounded-sm object-cover object-center w-full-[300px] md:w-[440px] md:h-[440px]"
+        widths={[320, 400, 440, 960]}
+        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 250px, (max-width: 1024): 440px"
+        class="w-full sm:w-[220px] md:w-[250px] lg:w-[440px] h-auto rounded-sm object-cover object-center"
         loading="lazy"
       />
     </div>

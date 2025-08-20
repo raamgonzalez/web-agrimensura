@@ -1,8 +1,9 @@
 ---
 import Logo from '../ui/Logo.astro';
 import { data } from '../data/data';
+import { icons } from '@/data/helper';
 
-const { contact } = data;
+const { networks } = data;
 ---
 
 <footer>
@@ -25,23 +26,17 @@ const { contact } = data;
       <!-- Redes sociales con iconos SVG -->
       <div class="flex justify-center md:justify-end gap-4">
         {
-          contact.networks.map((network) => {
+          networks.footer.map(({ name, url, icon }) => {
+            const Icon = icons[icon];
             return (
               <a
-                href={network.url}
+                href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
-                aria-label={network.name}
+                class="w-10 h-10 border-b-1 text-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label={name}
               >
-                <svg
-                  class="w-5 h-5"
-                  fill={network.icon.fill}
-                  stroke={network.icon.stroke}
-                  viewBox="0 0 24 24"
-                >
-                  <path d={network.icon.path} />
-                </svg>
+                <Icon color="#4c4d4c" />
               </a>
             );
           })

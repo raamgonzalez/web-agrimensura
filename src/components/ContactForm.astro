@@ -1,0 +1,201 @@
+---
+import TitleAndText from '@/ui/TitleAndText.astro';
+import { Mail, User, MessageCircle, Send } from '@lucide/astro';
+import { data } from '../data/data';
+import { icons } from '@/data/helper';
+
+const { networks } = data;
+---
+
+<div class="p-6 border-muted rounded-4xl border-b flex flex-col">
+  <!-- <h2 class="text-2xl font-semibold mb-6 text-left text-secondary">Contáctanos</h2> -->
+  <TitleAndText title="Contáctanos" />
+  <div class="flex flex-col md:flex-row gap-4 text-primary">
+    <form id="contact-form" class="space-y-4 flex-1 max-w-[800px]">
+      <!-- Nombre completo -->
+      <div>
+        <label
+          for="fullName"
+          class="text-sm font-medium text-foreground mb-1 flex items-center gap-2"
+        >
+          <User color="#4c4d4c" size={20} />
+          <p>Nombre completo</p>
+        </label>
+        <input
+          id="fullName"
+          type="text"
+          placeholder="Tu nombre y apellido"
+          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+          required
+        />
+        <p id="fullName-error" class="text-sm text-red-500 hidden">Nombre completo requerido</p>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="text-sm font-medium text-foreground mb-1 flex items-center gap-2">
+          <Mail color="#4c4d4c" size={20} />
+          <p>Email</p></label
+        >
+        <input
+          id="email"
+          type="email"
+          placeholder="ejemplo@email.com"
+          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+          required
+        />
+        <p id="email-error" class="text-sm text-red-500 hidden">Email inválido</p>
+      </div>
+
+      <!-- Asunto -->
+      <div>
+        <label
+          for="subject"
+          class="block text-sm font-medium text-foreground mb-1 flex items-center gap-2"
+        >
+          <MessageCircle color="#4c4d4c" size={20} />
+          <p>Asunto</p>
+        </label>
+        <input
+          id="subject"
+          type="text"
+          placeholder="Asunto del mensaje"
+          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+          required
+        />
+        <p id="subject-error" class="text-sm text-red-500 hidden">Asunto requerido</p>
+      </div>
+
+      <!-- Mensaje -->
+      <div>
+        <label for="message" class="block text-sm font-medium text-foreground mb-1">Mensaje</label>
+        <textarea
+          id="message"
+          rows="4"
+          placeholder="Escribe tu mensaje..."
+          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+          required></textarea>
+        <p id="message-error" class="text-sm text-red-500 hidden">Mensaje requerido</p>
+      </div>
+
+      <!-- Checkbox Términos -->
+      <div class="flex items-center gap-2">
+        <input
+          id="terms"
+          type="checkbox"
+          class="w-4 h-4 rounded border-primary text-primary focus:ring-0"
+          required
+        />
+        <label for="terms" class="text-sm text-foreground">Acepto los términos y condiciones</label>
+        <p id="terms-error" class="text-sm text-red-500 hidden">Debes aceptar los términos</p>
+      </div>
+
+      <!-- Botón Enviar -->
+      <button
+        type="submit"
+        class="min-w-32 py-2 px-4 bg-accent text-white font-semibold rounded-md hover:bg-primary/90 transition-colors flex gap-2 items-center justify-center"
+      >
+        <Send size={16} />
+        <p>Enviar mensaje</p>
+      </button>
+      <p id="form-success" class="text-green-500 hidden mt-2">¡Mensaje enviado correctamente!</p>
+      <p id="form-fail" class="text-red-500 hidden mt-2">
+        Error al enviar el mensaje. Intenta nuevamente.
+      </p>
+    </form>
+    <div class="flex flex-col gap-8 mt-4">
+      <ul
+        class="grid grid-cols-1 grid-rows-auto sm:grid-cols-3 sm:grid-rows-2 md:flex md:flex-col gap-4"
+      >
+        {
+          networks.form.map(({ name, url, description, icon }) => {
+            const Icon = icons[icon];
+            return (
+              <li class="flex items-center gap-2">
+                <a href={url} target="_blank" rel="noopener noreferrer" aria-label={name}>
+                  <Icon color="#4c4d4c" />
+                </a>
+                <p>{description}</p>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Reset errores y bordes
+    document.querySelectorAll('#contact-form input, #contact-form textarea').forEach((el) => {
+      el.classList.remove('border-red-500');
+    });
+    document
+      .querySelectorAll('#contact-form p.text-red-500')
+      .forEach((p) => p.classList.add('hidden'));
+    document.getElementById('form-success').classList.add('hidden');
+    document.getElementById('form-fail').classList.add('hidden');
+
+    const fullName = form.fullName.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
+    const terms = form.terms.checked;
+
+    let valid = true;
+
+    if (!fullName) {
+      document.getElementById('fullName-error').classList.remove('hidden');
+      form.fullName.classList.add('border-red-500');
+      valid = false;
+    }
+
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      document.getElementById('email-error').classList.remove('hidden');
+      form.email.classList.add('border-red-500');
+      valid = false;
+    }
+
+    if (!subject) {
+      document.getElementById('subject-error').classList.remove('hidden');
+      form.subject.classList.add('border-red-500');
+      valid = false;
+    }
+
+    if (!message) {
+      document.getElementById('message-error').classList.remove('hidden');
+      form.message.classList.add('border-red-500');
+      valid = false;
+    }
+
+    if (!terms) {
+      document.getElementById('terms-error').classList.remove('hidden');
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    // Enviar datos a tu endpoint
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fullName, email, subject, message }),
+      });
+
+      if (res.ok) {
+        document.getElementById('form-success').classList.remove('hidden');
+        form.reset();
+      } else {
+        document.getElementById('form-fail').classList.remove('hidden');
+      }
+    } catch (err) {
+      document.getElementById('form-fail').classList.remove('hidden');
+    }
+  });
+</script>
