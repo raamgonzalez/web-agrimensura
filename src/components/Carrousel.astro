@@ -2,11 +2,23 @@
 import { Image } from 'astro:assets';
 import { data } from '../data/data';
 import ChipProyecto from '../ui/ChipProyecto.astro';
+
+import img01 from '../assets/images/01.png';
+import img02 from '../assets/images/02.png';
+import img03 from '../assets/images/03.png';
+
+const images = {
+  img01: img01,
+  img02: img02,
+  img03: img03,
+};
+
 const { projects } = data;
 ---
 
 <div
   data-hs-carousel='{
+    "loadingClasses": "opacity-0",
     "dotsItemClasses": "hs-carousel-active:bg-accent hs-carousel-active:border-accent size-3 border border-primary rounded-full cursor-pointer dark:border-primary dark:hs-carousel-active:bg-secondary dark:hs-carousel-active:border-primary mb-2",
     "isAutoPlay": true
   }'
@@ -25,7 +37,7 @@ const { projects } = data;
               <ChipProyecto name={project.name} />
               <div class="flex justify-center h-full">
                 <Image
-                  src={project.src}
+                  src={images[project.src]}
                   class="w-full rounded-4xl object-cover"
                   alt={project.alt}
                   inferSize={true}
