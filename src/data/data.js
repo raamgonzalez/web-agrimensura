@@ -40,17 +40,17 @@ export const data = {
   projects: [
     {
       name: 'Levantamiento Topográfico',
-      src: 'img01',
+      src: img01,
       alt: 'Imagen de agrimensor midiendo terreno con estación total',
     },
     {
       name: 'Curvas de Nivel y Planimetría',
-      src: 'img02',
+      src: img02,
       alt: 'Imagen con curvas de nivel y trabajos de cartografía',
     },
     {
       name: 'Instalación de Estación de Referencia',
-      src: 'img03',
+      src: img03,
       alt: 'Imagen nivelando estación GNSS para georreferenciación',
     },
   ],
