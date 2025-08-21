@@ -17,7 +17,7 @@ const { title, description } = Astro.props;
     <slot />
     <Footer />
   </body><script is:inline src="./node_modules/preline/dist/index.js"></script>
-  <script type="module">
+  <script type="module" client:load>
     import 'preline/preline';
   </script>
 </html>
