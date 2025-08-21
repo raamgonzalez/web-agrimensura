@@ -7,7 +7,6 @@ const { projects } = data;
 ---
 
 <div class="w-full max-w-6xl mx-auto">
-  <!-- Contenedor Swiper -->
   <div class="swiper astro-swiper group">
     <div class="swiper-wrapper">
       {
@@ -132,7 +131,6 @@ const { projects } = data;
   </script>
 
   <style is:global>
-    /* ajustes seguros por si algún reset rompe la estructura de Swiper */
     .astro-swiper .swiper-wrapper {
       display: flex !important;
       align-items: stretch;
@@ -145,8 +143,6 @@ const { projects } = data;
       position: relative;
       width: 100%;
     }
-
-    /* ocultar pseudo-iconos por defecto de Swiper */
     .swiper-button-prev::after,
     .swiper-button-next::after {
       display: none !important;
