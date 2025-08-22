@@ -16,14 +16,33 @@ const { about } = data;
     </div>
     <div class="flex flex-col gap-8 sm:flex-row">
       <TitleAndText title={about.profile.name} description={about.profile.notes} />
-      <Image
-        src={about.profile.src}
-        alt={about.profile.name}
-        widths={[320, 400, 440, 960]}
-        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 250px, (max-width: 1024): 440px"
+      <div
+        id="parallax-wrapper"
         class="w-full sm:w-[220px] md:w-[250px] lg:w-[440px] h-auto rounded-sm object-cover object-center"
-        loading="lazy"
-      />
+      >
+        <Image
+          src={about.profile.src}
+          alt={about.profile.name}
+          widths={[320, 400, 440, 960]}
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 250px, (max-width: 1024): 440px"
+          class="parallax-image"
+          loading="lazy"
+        />
+      </div>
     </div>
   </section>
 </div>
+
+<script is:client>
+  window.addEventListener('DOMContentLoaded', () => {
+    const images = document.getElementsByClassName('parallax-image');
+    if (images.length > 0 && window.simpleParallax) {
+      new window.simpleParallax(images, {
+        delay: 1,
+        scale: 1.5,
+        transition: 'cubic-bezier(0,0,0,1)',
+        customWrapper: '#parallax-wrapper',
+      });
+    }
+  });
+</script>
