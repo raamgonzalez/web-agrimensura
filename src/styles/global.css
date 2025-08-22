@@ -4,11 +4,11 @@
 @source "../../node_modules/preline/dist/*.js";
 
 :root {
-  --background: oklch(0.95 0.005 240);
-  --foreground: oklch(0.35 0.05 240);
+  --background: #eceff1;
+  --foreground: #203e52;
   --primary: #4c4d4c;
-  --muted-foreground: oklch(0.55 0.03 120);
-  --accent: oklch(0.65 0.15 45);
+  --muted-foreground: #6f7461;
+  --accent: #d76c37;
   --font-geist: 'Geist Variable';
   --font-inter: 'Inter Variable';
 

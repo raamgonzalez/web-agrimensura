@@ -6,24 +6,21 @@ import { icons } from '@/data/helper';
 const { networks } = data;
 ---
 
-<footer>
-  <div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-      <!-- Logo gris para footer -->
+<footer class="">
+  <div class="">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-muted border-t border-b">
       <div class="flex justify-center md:justify-start">
         <Logo loading="lazy" />
       </div>
 
-      <!-- Información de la empresa -->
       <div class="text-center">
-        <h3 class="text-lg font-semibold mb-2">DGA Agrimensura</h3>
+        <h3 class="text-lg mb-2 text-primary font-bold">DGA Agrimensura</h3>
         <p class="text-sm">
           Servicios profesionales de agrimensura<br />
           Precisión y confianza en cada proyecto
         </p>
       </div>
 
-      <!-- Redes sociales con iconos SVG -->
       <div class="flex justify-center md:justify-end gap-4">
         {
           networks.footer.map(({ name, url, icon }) => {
@@ -44,8 +41,7 @@ const { networks } = data;
       </div>
     </div>
 
-    <!-- Copyright -->
-    <div class="border-t mt-8 pt-8 text-center border-muted">
+    <div class="mt-8 text-center">
       <p class="text-sm font-inter">© 2024 DGA Agrimensura. Todos los derechos reservados.</p>
     </div>
   </div>

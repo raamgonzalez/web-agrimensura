@@ -3,13 +3,86 @@ import { Image } from 'astro:assets';
 import heroImage from '../assets/images/01.png';
 ---
 
-<Image
-  class="w-full aspect-[16/9] sm:aspect-[4/3] md:aspect-[3/2] lg:aspect-[16/9] rounded-xl sm:rounded-2xl lg:rounded-3xl object-cover"
-  src={heroImage}
-  widths={[320, 640, 768, 1024, 1280, 1536]}
-  sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
-  loading="eager"
-  alt="Prueba"
-  format="webp"
-  quality={85}
-/>
+<section class="parallax-section rounded-xl sm:rounded-2xl lg:rounded-3xl" data-parallax>
+  <Image
+    class="parallax-bg w-full aspect-[16/9] sm:aspect-[4/3] md:aspect-[3/2] lg:aspect-[16/9] object-cover"
+    src={heroImage}
+    widths={[320, 640, 768, 1024, 1280, 1536]}
+    sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
+    loading="eager"
+    alt="Prueba"
+    format="webp"
+    quality={85}
+  />
+
+  //TODO: Ver si se agrega algo
+  <!-- <div class="parallax-content font-geist text-7xl text-background">
+    <h3>DGA</h3>
+    <h2>AGRIMENSURA</h2>
+  </div> -->
+</section>
+
+<style>
+  .parallax-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .parallax-bg {
+    position: absolute;
+    top: 0;
+
+    left: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    will-change: transform;
+  }
+
+  .parallax-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: var(--color-primary); */
+    font-weight: 900;
+    flex-direction: column;
+  }
+</style>
+
+<script>
+  class ParallaxController {
+    constructor() {
+      this.elements = document.querySelectorAll('[data-parallax]');
+      this.init();
+    }
+
+    init() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            window.addEventListener('scroll', () => this.updateParallax(entry.target));
+          }
+        });
+      });
+
+      this.elements.forEach((element) => observer.observe(element));
+    }
+
+    updateParallax(element) {
+      const rect = element.getBoundingClientRect();
+      const speed = 0.5;
+      const yPos = -(rect.top * speed);
+
+      const img = element.querySelector('.parallax-bg');
+      if (img) {
+        img.style.transform = `translateY(${yPos}px)`;
+      }
+    }
+  }
+
+  new ParallaxController();
+</script>
