@@ -1,0 +1,21 @@
+---
+const posterUrl =
+  'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1280&h=720&fit=crop';
+//TODO: Agregar video hero en formato webm
+const videoUrlWebm = '../assets/videos/video-hero.webm';
+import videoMp4 from '../assets/videos/video-hero.mp4';
+---
+
+<video
+  class="w-full aspect-[16/9] sm:aspect-[4/3] md:aspect-[3/2] lg:aspect-[16/9] rounded-xl sm:rounded-2xl lg:rounded-3xl object-cover"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="none"
+  poster={posterUrl}
+>
+  <!-- <source src={videoUrlWebm} type="video/webm" media="(min-width: 768px)" /> -->
+  <source src={videoMp4} type="video/mp4" />
+  <p>Tu navegador no soporta el elemento video.</p>
+</video>
