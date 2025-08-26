@@ -10,16 +10,52 @@ const links = [
 {
   links.map((link) => {
     return link.typeButton ? (
-      <button class="cursor-pointer rounded-lg group px-4 py-2.5 text-white gap-x-2 relative text-sm inline-flex  items-center justify-center overflow-hidden border border-accent bg-accent font-medium transition-all [box-shadow:0px_4px_1px_#d76c37bb] hover:translate-y-[2px] duration-200 hover:shadow-none">
+      <button class="cursor-pointer rounded-lg group px-4 py-2.5 text-white gap-x-2 relative text-sm inline-flex  items-center justify-center overflow-hidden border border-accent bg-accent font-medium transition-all [box-shadow:0px_4px_1px_#d76c37bb] hover:translate-y-[2px] duration-200 hover:shadow-none active:translate-y-[2px] active:shadow-none">
         <a href={link.url}>{link.name}</a>
       </button>
     ) : (
       <a
         href={link.url}
-        class="text-center text-secondary hover:text-accent transition-colors duration-200 font-medium"
+        class="nav-link text-center text-secondary hover:text-accent transition-colors duration-200 font-medium active:text-accent"
       >
         {link.name}
       </a>
     );
   })
 }
+
+<style>
+  .nav-link.active {
+    color: var(--accent);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('main > div[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+
+          navLinks.forEach((link) => {
+            link.classList.remove('active'); // removemos active
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active'); // agregamos active
+            }
+          });
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => observer.observe(section));
+  });
+</script>

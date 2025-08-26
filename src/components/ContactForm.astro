@@ -10,7 +10,7 @@ const { networks } = data;
 <div class="flex flex-col">
   <!-- <h2 class="text-2xl font-semibold mb-6 text-left text-secondary">Contáctanos</h2> -->
   <TitleAndText title="Contáctanos" />
-  <div class="flex flex-col md:flex-row gap-4 text-primary p-6">
+  <div class="flex flex-col md:flex-row gap-4 text-primary p-4">
     <form id="contact-form" class="space-y-4 flex-1 max-w-[800px]">
       <!-- Nombre completo -->
       <div>
@@ -118,7 +118,7 @@ const { networks } = data;
       >
         {
           networks.form.map(({ name, url, description, icon }) => {
-            const Icon = icons[icon];
+            const Icon = icons[icon as keyof typeof icons];
             return (
               <li class="flex items-center gap-2">
                 <a href={url} target="_blank" rel="noopener noreferrer" aria-label={name}>

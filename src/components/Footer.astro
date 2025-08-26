@@ -24,7 +24,7 @@ const { networks } = data;
       <div class="flex justify-center md:justify-end gap-4">
         {
           networks.footer.map(({ name, url, icon }) => {
-            const Icon = icons[icon];
+            const Icon = icons[icon as keyof typeof icons];
             return (
               <a
                 href={url}
@@ -42,7 +42,7 @@ const { networks } = data;
     </div>
 
     <div class="mt-8 text-center">
-      <p class="text-sm font-inter">© 2024 DGA Agrimensura. Todos los derechos reservados.</p>
+      <p class="text-sm font-inter">© 2024 Agrimensura DGA. Todos los derechos reservados.</p>
     </div>
   </div>
 </footer>

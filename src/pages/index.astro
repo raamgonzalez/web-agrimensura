@@ -18,16 +18,16 @@ const marginTopNavigation = 'scroll-mt-20';
       <Hero />
       <!-- <VideoHero /> -->
     </div>
-    <div id="about" class={marginTopNavigation}>
+    <div id="about" class={`${marginTopNavigation} about`}>
       <About />
     </div>
-    <div id="services" class={marginTopNavigation}>
+    <div id="services" class={`${marginTopNavigation} services`}>
       <Services />
     </div>
-    <div id="projects" class={marginTopNavigation}>
+    <div id="projects" class={`${marginTopNavigation}`}>
       <Projects />
     </div>
-    <div id="contact" class={marginTopNavigation}>
+    <div id="contact" class={`${marginTopNavigation}`}>
       <ContactForm />
     </div>
     <ContactIcon />
@@ -36,3 +36,42 @@ const marginTopNavigation = 'scroll-mt-20';
 
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"
 ></script>
+
+<style>
+  .about {
+    animation: revealX ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+  }
+
+  .services {
+    animation: revealY ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+  }
+  @keyframes revealX {
+    from {
+      opacity: 0;
+      translate: 900px 0;
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      translate: 0 0px;
+      filter: blur(0px);
+    }
+  }
+
+  @keyframes revealY {
+    from {
+      opacity: 0;
+      translate: 0 900px;
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      translate: 0 0px;
+      filter: blur(0px);
+    }
+  }
+</style>

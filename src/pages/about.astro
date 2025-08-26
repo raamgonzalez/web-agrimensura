@@ -32,17 +32,3 @@ const { about } = data;
     </div>
   </section>
 </div>
-
-<script is:client>
-  window.addEventListener('DOMContentLoaded', () => {
-    const images = document.getElementsByClassName('parallax-image');
-    if (images.length > 0 && window.simpleParallax) {
-      new window.simpleParallax(images, {
-        delay: 1,
-        scale: 1.5,
-        transition: 'cubic-bezier(0,0,0,1)',
-        customWrapper: '#parallax-wrapper',
-      });
-    }
-  });
-</script>
