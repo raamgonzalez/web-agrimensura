@@ -4,10 +4,10 @@
 @source "../../node_modules/preline/dist/*.js";
 
 :root {
-  --background: #eceff1;
-  --foreground: #203e52;
+  --background: #f8f9fa;
+  --foreground: #1e3a52;
   --primary: #4c4d4c;
-  --muted-foreground: #6f7461;
+  --muted-foreground: #6b7c6e;
   --accent: #d76c37;
   --font-geist: 'Geist Variable';
   --font-inter: 'Inter Variable';
@@ -57,5 +57,44 @@
   }
   body {
     @apply bg-background font-geist;
+  }
+
+  @keyframes revealX {
+    from {
+      opacity: 0;
+      translate: 150px 0;
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      translate: 0 0px;
+      filter: blur(0px);
+    }
+  }
+
+  @keyframes revealY {
+    from {
+      opacity: 0;
+      translate: 0 900px;
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      translate: 0 0px;
+      filter: blur(0px);
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      opacity: 0;
+      width: 90%;
+      /* filter: blur(10px); */
+    }
+    to {
+      opacity: 1;
+      width: 100%;
+      /* filter: blur(0px); */
+    }
   }
 }

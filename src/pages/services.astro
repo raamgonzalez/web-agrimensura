@@ -7,7 +7,7 @@ const { services } = data;
 
 <section class="flex flex-col">
   <TitleAndText title="Servicios" />
-  <div class="flex flex-col gap-8 md:ml-4">
+  <div class="flex flex-col gap-16 md:ml-4">
     {
       services.map((service, serviceIndex) => (
         <div
@@ -20,15 +20,24 @@ const { services } = data;
           >
             {service.name}
           </h3>
-          <div class="service-chips flex flex-wrap gap-2">
+          <div class="service-chips flex flex-wrap gap-4">
             {service.service.map((dataService, chipIndex) => (
-              <span
-                class="service-chip cursor-default text-center border border-muted text-primary text-sm px-3 py-1.5 rounded-full bg-background/50 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-md"
-                style={`--chip-index: ${chipIndex}; --service-index: ${serviceIndex}`}
-                data-city={service.name.toLowerCase().replace(/\s+/g, '-')}
-              >
-                {dataService}
-              </span>
+              <div class="tooltip-container relative">
+                <span
+                  class="service-chip cursor-help text-center border border-muted text-primary text-sm px-3 py-1.5 rounded-full bg-background/50 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-md "
+                  style={`--chip-index: ${chipIndex}; --service-index: ${serviceIndex}`}
+                  data-city={service.name.toLowerCase().replace(/\s+/g, '-')}
+                  data-tooltip={dataService.description}
+                >
+                  {dataService.name}
+                </span>
+                <div class="tooltip absolute bottom-full left-7 transform  mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg shadow-lg opacity-0 pointer-events-none transition-all duration-200 whitespace-nowrap max-w-xs z-10">
+                  <div class="tooltip-content text-center leading-relaxed whitespace-normal">
+                    {dataService.description}
+                  </div>
+                  <div class="tooltip-arrow absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900" />
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -45,18 +54,31 @@ const { services } = data;
     serviceChips.forEach((chip) => {
       const cityId = chip.getAttribute('data-city');
       const cityTitle = document.querySelector(`.service-title[data-city="${cityId}"]`);
+      const tooltip = chip.parentElement.querySelector('.tooltip');
 
       if (cityTitle) {
         chip.addEventListener('mouseenter', () => {
           cityTitle.style.color = 'var(--accent)';
           cityTitle.style.fontWeight = '700';
           cityTitle.style.transform = 'translateX(4px)';
+
+          if (tooltip) {
+            tooltip.style.opacity = '1';
+            tooltip.style.pointerEvents = 'auto';
+            tooltip.style.transform = 'translateX(-50%) translateY(-4px)';
+          }
         });
 
         chip.addEventListener('mouseleave', () => {
           cityTitle.style.color = '';
           cityTitle.style.fontWeight = '';
           cityTitle.style.transform = '';
+
+          if (tooltip) {
+            tooltip.style.opacity = '0';
+            tooltip.style.pointerEvents = 'none';
+            tooltip.style.transform = 'translateX(-50%) translateY(0)';
+          }
         });
       }
     });
@@ -105,6 +127,7 @@ const { services } = data;
   .service-title {
     opacity: 0;
     transform: translateX(-30px);
+    min-width: 250px;
   }
 
   /* Animaciones activadas por scroll usando view() timeline */
@@ -126,13 +149,41 @@ const { services } = data;
   .service-chip:hover {
     background: hsl(var(--primary) / 0.1);
     border-color: hsl(var(--primary) / 0.5);
-    transform: scale(1.05) translateY(-2px);
+    transform: scale(1.05) translateY(-4px);
     box-shadow: 0 4px 12px hsl(var(--primary) / 0.2);
+  }
+
+  /* Estilos para tooltips */
+  .tooltip-container {
+    position: relative;
+  }
+
+  .tooltip {
+    min-width: 200px;
+    max-width: 300px;
+    white-space: normal;
+    word-wrap: break-word;
+    background: rgba(17, 24, 39, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    z-index: 1000;
+  }
+
+  .tooltip-content {
+    white-space: normal;
+    text-align: left;
+    word-wrap: break-word;
+  }
+
+  .tooltip-arrow {
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
   }
 
   /* Estado activo para la ciudad cuando se hace hover en sus chips */
   .service-row:has(.service-chip:hover) .service-title {
-    color: hsl(var(--accent));
+    color: var(--accent);
     font-weight: 700;
     transform: translateX(4px);
   }
@@ -147,6 +198,21 @@ const { services } = data;
     .service-title {
       animation: slide-in-title 0.6s ease-out forwards;
       animation-delay: calc(var(--service-index, 0) * 200ms + 300ms);
+    }
+  }
+
+  /* Responsive para tooltips en móviles */
+  @media (max-width: 768px) {
+    .tooltip {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) !important;
+      max-width: calc(100vw - 40px);
+    }
+
+    .tooltip-arrow {
+      display: none;
     }
   }
 </style>

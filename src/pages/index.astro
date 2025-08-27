@@ -7,6 +7,7 @@ import Projects from './projects.astro';
 import Services from './services.astro';
 import ContactIcon from '@/ui/ContactIcon.astro';
 import VideoHero from '@/components/VideoHero.astro';
+import Xxx from '@/components/xxx.astro';
 
 const marginTopNavigation = 'scroll-mt-20';
 ---
@@ -39,39 +40,14 @@ const marginTopNavigation = 'scroll-mt-20';
 
 <style>
   .about {
-    animation: revealX ease-in-out both;
-    animation-timeline: view();
+    animation: revealX linear both;
+    animation-timeline: scroll();
     animation-range: entry 10% cover 30%;
   }
 
   .services {
     animation: revealY ease-in-out both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 30%;
-  }
-  @keyframes revealX {
-    from {
-      opacity: 0;
-      translate: 900px 0;
-      filter: blur(10px);
-    }
-    to {
-      opacity: 1;
-      translate: 0 0px;
-      filter: blur(0px);
-    }
-  }
-
-  @keyframes revealY {
-    from {
-      opacity: 0;
-      translate: 0 900px;
-      filter: blur(10px);
-    }
-    to {
-      opacity: 1;
-      translate: 0 0px;
-      filter: blur(0px);
-    }
+    animation-timeline: scroll();
+    animation-range: entry 11% cover 30%;
   }
 </style>

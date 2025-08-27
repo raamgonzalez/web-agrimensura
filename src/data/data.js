@@ -56,31 +56,108 @@ export const data = {
   ],
   services: [
     {
-      name: 'Ciudad de Buenos Aires',
+      name: 'Provincia de Buenos Aires',
       service: [
-        'Levantamientos topográficos',
-        'Georreferenciación de terrenos',
-        'Parcelamiento urbano',
-        'Relevamientos catastrales',
+        {
+          name: 'Estados parcelarios',
+          description:
+            'Documentación técnica que certifica el estado actual de una parcela, sus límites y características legales y catastrales.',
+        },
+        {
+          name: 'Georreferenciaciones',
+          description:
+            'Determinación de la ubicación precisa de un inmueble mediante coordenadas geográficas oficiales, cumpliendo normativas vigentes.',
+        },
+        {
+          name: 'División en propiedad horizontal',
+          description:
+            'Proceso de subdivisión de un inmueble en unidades funcionales independientes bajo el régimen de propiedad horizontal.',
+        },
+        {
+          name: 'Mensura para usucapión',
+          description:
+            'Levantamiento y plano técnico necesario para trámites judiciales de prescripción adquisitiva (usucapión).',
+        },
+        {
+          name: 'Subdivisiones rurales y urbanas',
+          description:
+            'División técnica de terrenos en áreas rurales y urbanas conforme a las normativas municipales y provinciales.',
+        },
       ],
     },
     {
-      name: 'Capital Federal',
+      name: 'CABA',
       service: [
-        'Curvas de nivel y planimetría',
-        'Asesoramiento en construcción civil',
-        'Relevamientos para licencias urbanísticas',
-        'Control de obra y topografía aplicada',
+        {
+          name: 'Enrases',
+          description:
+            'Determinación y materialización de niveles de referencia para obras de construcción y urbanización.',
+        },
+        {
+          name: 'Relevamientos planialtimétricos',
+          description:
+            'Medición detallada del terreno considerando su relieve (altimetría) y dimensiones planas (planimetría) para proyectos urbanos.',
+        },
+        {
+          name: 'Estados parcelarios',
+          description:
+            'Certificación catastral de los límites y estado de una parcela en el ámbito de la Ciudad Autónoma de Buenos Aires.',
+        },
+        {
+          name: 'Mensuras particulares',
+          description:
+            'Levantamiento técnico de los límites y características de un inmueble para su correcta individualización y documentación.',
+        },
+        {
+          name: 'Subdivisión en propiedad horizontal',
+          description:
+            'Proceso técnico para dividir un inmueble en unidades funcionales independientes bajo el régimen de propiedad horizontal, cumpliendo normativas vigentes.',
+        },
       ],
     },
     {
       name: 'Río Negro',
       service: [
-        'Levantamientos planialtimétricos',
-        'Cartografía agrícola',
-        'Georreferenciación de proyectos rurales',
-        'Asesoramiento en obras civiles',
-        'Monitoreo de infraestructura',
+        {
+          name: 'Replanteo y seguimiento de obra',
+          description:
+            'Ubicación y materialización en el terreno de los ejes y niveles de un proyecto de obra, con monitoreo técnico durante su ejecución.',
+        },
+        {
+          name: 'Relevamientos planialtimétricos',
+          description:
+            'Medición integral de dimensiones y altitudes del terreno, necesaria para proyectos rurales y urbanos en la provincia.',
+        },
+        {
+          name: 'Modelos digitales de terreno',
+          description:
+            'Generación de representaciones digitales 3D del relieve del terreno para análisis topográficos y de ingeniería.',
+        },
+        {
+          name: 'Vuelos fotogramétricos',
+          description:
+            'Captura aérea de imágenes georreferenciadas para obtener información precisa del terreno y generar ortofotos.',
+        },
+        {
+          name: 'Mensuras y división rurales y urbanas',
+          description:
+            'Planos técnicos y subdivisiones de terrenos en áreas urbanas y rurales conforme a la legislación provincial.',
+        },
+        {
+          name: 'Deslinde y amojonamiento',
+          description:
+            'Marcación física de límites de una propiedad en el terreno mediante colocación de mojones y referencias permanentes.',
+        },
+        {
+          name: 'Mensura y división rural y urbana',
+          description:
+            'Trabajos de mensura para individualizar y dividir parcelas en zonas urbanas y rurales, cumpliendo normativas vigentes.',
+        },
+        {
+          name: 'División en propiedad horizontal',
+          description:
+            'Proceso técnico para subdividir edificaciones en unidades independientes bajo régimen de propiedad horizontal en Río Negro.',
+        },
       ],
     },
   ],
