@@ -5,25 +5,30 @@ import heroImage from '../assets/images/01.png';
 
 <section
   id="parallax-wrapper"
-  class="parallax-section rounded-xl sm:rounded-2xl lg:rounded-3xl"
+  class="parallax-section rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden"
   data-parallax
 >
   <Image
     class="parallax-image w-full object-cover rounded"
-    src={heroImage}
+    src={heroImage || '/placeholder.svg'}
     widths={[320, 640, 768, 1024, 1280, 1536]}
     sizes="100vw"
     loading="eager"
-    alt="Prueba"
+    alt="Servicios de Agrimensura Profesional"
     format="webp"
     quality={85}
   />
 
-  <!-- //TODO: Ver si se agrega algo -->
-  <!-- <div class="parallax-content font-geist text-7xl text-background">
-    <h3>DGA</h3>
-    <h2>AGRIMENSURA</h2>
-  </div> -->
+  <!-- Simplified to just "Servicios de agrimensura" text with parallax effect -->
+  <div
+    class="parallax-content absolute inset-0 flex flex-col justify-center items-center text-center z-10"
+  >
+    <h1
+      class="parallax-text font-inter text-5xl md:text-7xl lg:text-8xl text-background font-bold tracking-wide drop-shadow-2xl"
+    >
+      Servicios de agrimensura
+    </h1>
+  </div>
 </section>
 
 <script is:client>
@@ -37,6 +42,25 @@ import heroImage from '../assets/images/01.png';
         orientation: 'right',
         customWrapper: '#parallax-wrapper',
         maxTransition: 60,
+      });
+    }
+
+    const parallaxText = document.querySelector('.parallax-text');
+
+    if (parallaxText) {
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallaxWrapper = document.getElementById('parallax-wrapper');
+
+        if (parallaxWrapper) {
+          const rect = parallaxWrapper.getBoundingClientRect();
+          const speed = 0.5; // Text moves slower than normal scroll
+
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            const yPos = scrolled * speed;
+            parallaxText.style.transform = `translateY(${yPos}px)`;
+          }
+        }
       });
     }
   });

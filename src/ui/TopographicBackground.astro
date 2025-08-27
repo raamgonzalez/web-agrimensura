@@ -1,0 +1,259 @@
+<div class="absolute inset-0 overflow-hidden opacity-10">
+  <svg
+    class="absolute inset-0 w-full h-full"
+    viewBox="0 0 1200 2000"
+    preserveAspectRatio="xMidYMid slice"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <pattern
+        id="topographic-grid"
+        x="0"
+        y="0"
+        width="40"
+        height="40"
+        patternUnits="userSpaceOnUse"
+      >
+        <path
+          d="M 40 0 L 0 0 0 40"
+          fill="none"
+          stroke="oklch(0.97 0 0)"
+          strokeWidth="0.5"
+          opacity="0.3"></path>
+      </pattern>
+    </defs>
+
+    {/* Grid background */}
+    <rect width="100%" height="100%" fill="url(#topographic-grid)"></rect>
+
+    {/* Contour lines - elevation curves */}
+    <g stroke="oklch(0.922 0 0)" strokeWidth="1" fill="none" opacity="0.4">
+      {/* Main elevation contours */}
+      <path d="M 100 200 Q 300 180 500 220 T 900 200 Q 1000 190 1100 210"></path>
+      <path d="M 80 250 Q 280 230 480 270 T 880 250 Q 980 240 1080 260"></path>
+      <path d="M 120 300 Q 320 280 520 320 T 920 300 Q 1020 290 1120 310"></path>
+      <path d="M 90 350 Q 290 330 490 370 T 890 350 Q 990 340 1090 360"></path>
+      <path d="M 110 400 Q 310 380 510 420 T 910 400 Q 1010 390 1110 410"></path>
+      <path d="M 140 500 Q 340 480 540 520 T 940 500 Q 1040 490 1140 510"></path>
+      <path d="M 60 600 Q 260 580 460 620 T 860 600 Q 960 590 1060 610"></path>
+      <path d="M 180 700 Q 380 680 580 720 T 980 700 Q 1080 690 1180 710"></path>
+      <path d="M 100 800 Q 300 780 500 820 T 900 800 Q 1000 790 1100 810"></path>
+      <path d="M 160 900 Q 360 880 560 920 T 960 900 Q 1060 890 1160 910"></path>
+      <path d="M 80 1000 Q 280 980 480 1020 T 880 1000 Q 980 990 1080 1010"></path>
+      <path d="M 120 1100 Q 320 1080 520 1120 T 920 1100 Q 1020 1090 1120 1110"></path>
+      <path d="M 200 1200 Q 400 1180 600 1220 T 1000 1200 Q 1100 1190 1200 1210"></path>
+      <path d="M 40 1300 Q 240 1280 440 1320 T 840 1300 Q 940 1290 1040 1310"></path>
+      <path d="M 180 1400 Q 380 1380 580 1420 T 980 1400 Q 1080 1390 1180 1410"></path>
+      <path d="M 100 1500 Q 300 1480 500 1520 T 900 1500 Q 1000 1490 1100 1510"></path>
+      <path d="M 160 1600 Q 360 1580 560 1620 T 960 1600 Q 1060 1590 1160 1610"></path>
+      <path d="M 80 1700 Q 280 1680 480 1720 T 880 1700 Q 980 1690 1080 1710"></path>
+      <path d="M 140 1800 Q 340 1780 540 1820 T 940 1800 Q 1040 1790 1140 1810"></path>
+      <path d="M 60 1900 Q 260 1880 460 1920 T 860 1900 Q 960 1890 1060 1910"></path>
+
+      {/* Secondary contours */}
+      <path
+        d="M 150 150 Q 350 130 550 170 T 950 150 Q 1050 140 1150 160"
+        strokeWidth="0.8"
+        opacity="0.3"></path>
+      <path
+        d="M 70 450 Q 270 430 470 470 T 870 450 Q 970 440 1070 460"
+        strokeWidth="0.8"
+        opacity="0.3"></path>
+      <path
+        d="M 130 500 Q 330 480 530 520 T 930 500 Q 1030 490 1130 510"
+        strokeWidth="0.8"
+        opacity="0.3"></path>
+      <path
+        d="M 190 750 Q 390 730 590 770 T 990 750 Q 1090 740 1190 760"
+        strokeWidth="0.8"
+        opacity="0.3"></path>
+      <path
+        d="M 50 950 Q 250 930 450 970 T 850 950 Q 950 940 1050 960"
+        strokeWidth="0.8"
+        opacity="0.3"></path>
+      <path
+        d="M 170 1150 Q 370 1130 570 1170 T 970 1150 Q 1070 1140 1170 1160"
+        strokeWidth="0.8"
+        opacity="0.3"></path>
+      <path
+        d="M 90 1350 Q 290 1330 490 1370 T 890 1350 Q 990 1340 1090 1360"
+        strokeWidth="0.8"
+        opacity="0.3"></path>
+      <path
+        d="M 210 1550 Q 410 1530 610 1570 T 1010 1550 Q 1110 1540 1210 1560"
+        strokeWidth="0.8"
+        opacity="0.3"></path>
+      <path
+        d="M 30 1750 Q 230 1730 430 1770 T 830 1750 Q 930 1740 1030 1760"
+        strokeWidth="0.8"
+        opacity="0.3"></path>
+
+      {/* Tertiary fine contours */}
+      <path
+        d="M 160 100 Q 360 80 560 120 T 960 100 Q 1060 90 1160 110"
+        strokeWidth="0.6"
+        opacity="0.25"></path>
+      <path
+        d="M 40 550 Q 240 530 440 570 T 840 550 Q 940 540 1040 560"
+        strokeWidth="0.6"
+        opacity="0.25"></path>
+      <path
+        d="M 180 600 Q 380 580 580 620 T 980 600 Q 1080 590 1180 610"
+        strokeWidth="0.6"
+        opacity="0.25"></path>
+      <path
+        d="M 220 850 Q 420 830 620 870 T 1020 850 Q 1120 840 1220 860"
+        strokeWidth="0.6"
+        opacity="0.25"></path>
+      <path
+        d="M 20 1050 Q 220 1030 420 1070 T 820 1050 Q 920 1040 1020 1060"
+        strokeWidth="0.6"
+        opacity="0.25"></path>
+      <path
+        d="M 200 1250 Q 400 1230 600 1270 T 1000 1250 Q 1100 1240 1200 1260"
+        strokeWidth="0.6"
+        opacity="0.25"></path>
+      <path
+        d="M 120 1450 Q 320 1430 520 1470 T 920 1450 Q 1020 1440 1120 1460"
+        strokeWidth="0.6"
+        opacity="0.25"></path>
+      <path
+        d="M 240 1650 Q 440 1630 640 1670 T 1040 1650 Q 1140 1640 1240 1660"
+        strokeWidth="0.6"
+        opacity="0.25"></path>
+      <path
+        d="M 10 1850 Q 210 1830 410 1870 T 810 1850 Q 910 1840 1010 1860"
+        strokeWidth="0.6"
+        opacity="0.25"></path>
+    </g>
+
+    {/* Spot elevations - small circles with numbers */}
+    <g fill="oklch(0.556 0 0)" fontSize="8" fontFamily="monospace" opacity="0.6">
+      <circle cx="250" cy="200" r="1.5"></circle>
+      <text x="255" y="205" textAnchor="start"> 142.5 </text>
+
+      <circle cx="450" cy="320" r="1.5"></circle>
+      <text x="455" y="325" textAnchor="start"> 138.2 </text>
+
+      <circle cx="650" cy="250" r="1.5"></circle>
+      <text x="655" y="255" textAnchor="start"> 145.8 </text>
+
+      <circle cx="850" cy="380" r="1.5"></circle>
+      <text x="855" y="385" textAnchor="start"> 135.1 </text>
+
+      <circle cx="350" cy="650" r="1.5"></circle>
+      <text x="355" y="655" textAnchor="start"> 129.7 </text>
+
+      <circle cx="750" cy="850" r="1.5"></circle>
+      <text x="755" y="855" textAnchor="start"> 132.4 </text>
+
+      <circle cx="450" cy="1100" r="1.5"></circle>
+      <text x="455" y="1105" textAnchor="start"> 126.8 </text>
+
+      <circle cx="650" cy="1350" r="1.5"></circle>
+      <text x="655" y="1355" textAnchor="start"> 124.2 </text>
+
+      <circle cx="350" cy="1600" r="1.5"></circle>
+      <text x="355" y="1605" textAnchor="start"> 121.5 </text>
+
+      <circle cx="850" cy="1800" r="1.5"></circle>
+      <text x="855" y="1805" textAnchor="start"> 118.9 </text>
+    </g>
+
+    {/* Survey points - triangulation markers */}
+    <g stroke="oklch(0.708 0 0)" strokeWidth="1.5" fill="none" opacity="0.5">
+      <path d="M 200 180 L 210 200 L 190 200 Z"></path>
+      <path d="M 600 280 L 610 300 L 590 300 Z"></path>
+      <path d="M 800 350 L 810 370 L 790 370 Z"></path>
+      <path d="M 400 750 L 410 770 L 390 770 Z"></path>
+      <path d="M 700 1050 L 710 1070 L 690 1070 Z"></path>
+      <path d="M 300 1300 L 310 1320 L 290 1320 Z"></path>
+      <path d="M 900 1550 L 910 1570 L 890 1570 Z"></path>
+      <path d="M 500 1750 L 510 1770 L 490 1770 Z"></path>
+    </g>
+
+    {/* Property boundaries - dashed lines */}
+    <g stroke="oklch(0.708 0 0)" strokeWidth="1" strokeDasharray="5,3" fill="none" opacity="0.4">
+      <path d="M 300 100 L 300 1900"></path>
+      <path d="M 700 100 L 700 1900"></path>
+      <path d="M 100 300 L 1100 300"></path>
+      <path d="M 100 800 L 1100 800"></path>
+      <path d="M 100 1300 L 1100 1300"></path>
+      <path d="M 100 1700 L 1100 1700"></path>
+    </g>
+    <g fill="oklch(0.556 0 0)" fontSize="8" fontFamily="monospace" opacity="0.6">
+      <circle cx="250" cy="200" r="1.5"></circle>
+      <text x="255" y="205" textAnchor="start"> 142.5 </text>
+
+      <circle cx="450" cy="320" r="1.5"></circle>
+      <text x="455" y="325" textAnchor="start"> 138.2 </text>
+
+      <circle cx="650" cy="250" r="1.5"></circle>
+      <text x="655" y="255" textAnchor="start"> 145.8 </text>
+
+      <circle cx="850" cy="380" r="1.5"></circle>
+      <text x="855" y="385" textAnchor="start"> 135.1 </text>
+
+      <circle cx="350" cy="650" r="1.5"></circle>
+      <text x="355" y="655" textAnchor="start"> 129.7 </text>
+
+      <circle cx="750" cy="850" r="1.5"></circle>
+      <text x="755" y="855" textAnchor="start"> 132.4 </text>
+
+      <circle cx="450" cy="1100" r="1.5"></circle>
+      <text x="455" y="1105" textAnchor="start"> 126.8 </text>
+
+      <circle cx="650" cy="1350" r="1.5"></circle>
+      <text x="655" y="1355" textAnchor="start"> 124.2 </text>
+
+      <circle cx="350" cy="1600" r="1.5"></circle>
+      <text x="355" y="1605" textAnchor="start"> 121.5 </text>
+
+      <circle cx="850" cy="1800" r="1.5"></circle>
+      <text x="855" y="1805" textAnchor="start"> 118.9 </text>
+    </g>
+
+    {/* Survey points - triangulation markers */}
+    <g stroke="oklch(0.708 0 0)" strokeWidth="1.5" fill="none" opacity="0.5">
+      <path d="M 200 180 L 210 200 L 190 200 Z"></path>
+      <path d="M 600 280 L 610 300 L 590 300 Z"></path>
+      <path d="M 800 350 L 810 370 L 790 370 Z"></path>
+      <path d="M 400 750 L 410 770 L 390 770 Z"></path>
+      <path d="M 700 1050 L 710 1070 L 690 1070 Z"></path>
+      <path d="M 300 1300 L 310 1320 L 290 1320 Z"></path>
+      <path d="M 900 1550 L 910 1570 L 890 1570 Z"></path>
+      <path d="M 500 1750 L 510 1770 L 490 1770 Z"></path>
+    </g>
+
+    {/* Property boundaries - dashed lines */}
+    <g stroke="oklch(0.708 0 0)" strokeWidth="1" strokeDasharray="5,3" fill="none" opacity="0.4">
+      <path d="M 300 100 L 300 1900"></path>
+      <path d="M 700 100 L 700 1900"></path>
+      <path d="M 100 300 L 1100 300"></path>
+      <path d="M 100 800 L 1100 800"></path>
+      <path d="M 100 1300 L 1100 1300"></path>
+      <path d="M 100 1700 L 1100 1700"></path>
+    </g>
+  </svg>
+
+  <path d="M 100 200 Q 300 180 500 220 T 900 200 Q 1000 190 1100 210"></path>
+  <path d="M 80 250 Q 280 230 480 270 T 880 250 Q 980 240 1080 260"></path>
+  <path d="M 120 300 Q 320 280 520 320 T 920 300 Q 1020 290 1120 310"></path>
+  <path d="M 90 350 Q 290 330 490 370 T 890 350 Q 990 340 1090 360"></path>
+  <path d="M 110 400 Q 310 380 510 420 T 910 400 Q 1010 390 1110 410"></path>
+  <path d="M 140 500 Q 340 480 540 520 T 940 500 Q 1040 490 1140 510"></path>
+  <path d="M 60 600 Q 260 580 460 620 T 860 600 Q 960 590 1060 610"></path>
+  <path d="M 180 700 Q 380 680 580 720 T 980 700 Q 1080 690 1180 710"></path>
+  <path d="M 100 800 Q 300 780 500 820 T 900 800 Q 1000 790 1100 810"></path>
+  <path d="M 160 900 Q 360 880 560 920 T 960 900 Q 1060 890 1160 910"></path>
+  <path d="M 80 1000 Q 280 980 480 1020 T 880 1000 Q 980 990 1080 1010"></path>
+  <path d="M 120 1100 Q 320 1080 520 1120 T 920 1100 Q 1020 1090 1120 1110"></path>
+  <path d="M 200 1200 Q 400 1180 600 1220 T 1000 1200 Q 1100 1190 1200 1210"></path>
+  <path d="M 40 1300 Q 240 1280 440 1320 T 840 1300 Q 940 1290 1040 1310"></path>
+  <path d="M 180 1400 Q 380 1380 580 1420 T 980 1400 Q 1080 1390 1180 1410"></path>
+  <path d="M 100 1500 Q 300 1480 500 1520 T 900 1500 Q 1000 1490 1100 1510"></path>
+  <path d="M 160 1600 Q 360 1580 560 1620 T 960 1600 Q 1060 1590 1160 1610"></path>
+  <path d="M 80 1700 Q 280 1680 480 1720 T 880 1700 Q 980 1690 1080 1710"></path>
+  <path d="M 140 1800 Q 340 1780 540 1820 T 940 1800 Q 1040 1790 1140 1810"></path>
+  <path d="M 60 1900 Q 260 1880 460 1920 T 860 1900 Q 960 1890 1060 1910"></path>
+</div>
