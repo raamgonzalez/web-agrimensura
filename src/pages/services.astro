@@ -5,7 +5,7 @@ import { data } from '../data/data';
 const { services } = data;
 ---
 
-<section class="flex flex-col">
+<section class="flex flex-col gap-4 md:gap-8">
   <TitleAndText title="Servicios" />
   <div class="flex flex-col gap-16 md:ml-4">
     {
@@ -31,7 +31,7 @@ const { services } = data;
                 >
                   {dataService.name}
                 </span>
-                <div class="tooltip absolute bottom-full left-7 transform  mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg shadow-lg opacity-0 pointer-events-none transition-all duration-200 whitespace-nowrap max-w-xs z-10">
+                <div class="tooltip absolute bottom-full left-7 transform  mb-2 px-3 py-2 bg-primary text-background text-xs rounded-lg shadow-lg opacity-0 pointer-events-none transition-all duration-200 whitespace-nowrap max-w-xs z-10">
                   <div class="tooltip-content text-center leading-relaxed whitespace-normal">
                     {dataService.description}
                   </div>

@@ -12,17 +12,19 @@
   --font-geist: 'Geist Variable';
   --font-inter: 'Inter Variable';
 
-  --title-web: 1.875rem; /* 30px */
-  --title-tablet: 1.5rem; /* 24px */
-  --title-mobile: 1.25rem; /* 20px */
+  --title-web: 2.25rem; /* ~36px */
+  --title-tablet: 1.8rem; /* ~29px */
+  --title-mobile: 1.5rem; /* ~24px */
 
-  --desc-web: 1.125rem; /* 18px */
-  --desc-tablet: 1rem; /* 16px */
-  --desc-mobile: 0.875rem; /* 14px */
+  /* Descripciones */
+  --desc-web: 1.35rem; /* ~22px */
+  --desc-tablet: 1.2rem; /* ~19px */
+  --desc-mobile: 1rem; /* ~16px */
 
-  --gap-web: 6rem; /* 64px → gap-16 */
-  --gap-tablet: 4rem; /* 32px → gap-8 */
-  --gap-mobile: 3rem; /* 16px → gap-4 */
+  /* Gaps */
+  --gap-web: 7.2rem; /* ~115px */
+  --gap-tablet: 4.8rem; /* ~77px */
+  --gap-mobile: 3.6rem; /* ~58px */
 }
 
 @theme inline {

@@ -7,10 +7,10 @@ import { icons } from '@/data/helper';
 const { networks } = data;
 ---
 
-<div class="flex flex-col">
+<div class="flex flex-col gap-4 md:gap-8">
   <!-- <h2 class="text-2xl font-semibold mb-6 text-left text-secondary">Contáctanos</h2> -->
   <TitleAndText title="Contáctanos" />
-  <div class="flex flex-col md:flex-row gap-16 text-primary p-4">
+  <div class="flex flex-col md:flex-row gap-16 text-primary px-4">
     <form id="contact-form" class="space-y-4 flex-1 max-w-[800px] min-w-[300px]">
       <!-- Nombre completo -->
       <div>
@@ -116,7 +116,7 @@ const { networks } = data;
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={name}
-                  class="flex items-center gap-4 p-4 bg-secondary/20 rounded-xl  hover:shadow-sm transition-all duration-300 group-hover:scale-105"
+                  class="flex items-center gap-4 p-4 bg-secondary/20 rounded-xl hover:shadow-sm transition-all duration-300 group-hover:scale-105 relative"
                 >
                   <div class="flex-shrink-0 from-secondary/20 to-accent/10 rounded-lg flex items-center justify-center group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300">
                     <Icon color="#4c4d4c" size={24} />
@@ -127,6 +127,7 @@ const { networks } = data;
                     </h3>
                     <p class="text-sm text-primary">{description}</p>
                   </div>
+                  <div class="absolute top-4 right-4 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-150 group-active:opacity-100 group-active:scale-150" />
                 </a>
               </div>
             );

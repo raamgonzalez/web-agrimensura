@@ -14,6 +14,7 @@ const marginTopNavigation = 'scroll-mt-20';
 
 <Layout title="Agrimensura DGA">
   <main class="flex flex-col gap-mobile sm:gap-tablet md:gap-web">
+    <TopographicBackground />
     <div id="init" class={marginTopNavigation}>
       <!--TODO: Decidir cual de los dos colocamos -->
       <Hero client:visible />
@@ -29,7 +30,7 @@ const marginTopNavigation = 'scroll-mt-20';
       <Projects />
     </div>
     <div id="contact" class={`${marginTopNavigation}`}>
-      <ContactForm />
+      <ContactForm client:visible />
     </div>
     <ContactIcon />
   </main>
@@ -41,8 +42,8 @@ const marginTopNavigation = 'scroll-mt-20';
 <style>
   .about {
     animation: revealX linear both;
-    animation-timeline: scroll();
-    animation-range: entry 10% cover 30%;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
   }
 
   .services {
