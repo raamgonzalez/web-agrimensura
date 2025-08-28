@@ -174,6 +174,6 @@ export const data = {
   },
   networks: {
     footer: [networks.instagram, networks.facebook, networks.mail],
-    form: [networks.mail, networks.location, networks.cell, networks.instagram, networks.facebook],
+    form: [networks.mail, networks.cell, networks.instagram, networks.facebook],
   },
 };

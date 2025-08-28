@@ -12,11 +12,11 @@ import TopographicBackground from '@/ui/TopographicBackground.astro';
 const marginTopNavigation = 'scroll-mt-20';
 ---
 
-<Layout title="DGA Agrimensura">
+<Layout title="Agrimensura DGA">
   <main class="flex flex-col gap-mobile sm:gap-tablet md:gap-web">
     <div id="init" class={marginTopNavigation}>
       <!--TODO: Decidir cual de los dos colocamos -->
-      <Hero />
+      <Hero client:visible />
       <!-- <VideoHero /> -->
     </div>
     <div id="about" class={`${marginTopNavigation} about`}>

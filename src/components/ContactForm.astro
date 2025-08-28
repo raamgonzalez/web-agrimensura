@@ -11,7 +11,7 @@ const { networks } = data;
   <!-- <h2 class="text-2xl font-semibold mb-6 text-left text-secondary">Contáctanos</h2> -->
   <TitleAndText title="Contáctanos" />
   <div class="flex flex-col md:flex-row gap-16 text-primary p-4">
-    <form id="contact-form" class="space-y-4 flex-1 max-w-[800px]">
+    <form id="contact-form" class="space-y-4 flex-1 max-w-[800px] min-w-[300px]">
       <!-- Nombre completo -->
       <div>
         <label
@@ -89,14 +89,6 @@ const { networks } = data;
         <label for="terms" class="text-sm text-foreground">Acepto los términos y condiciones</label>
         <p id="terms-error" class="text-sm text-red-500 hidden">Debes aceptar los términos</p>
       </div>
-
-      <!-- Botón Enviar
-      <button
-        type="submit"
-        class="min-w-32 py-2 px-4 bg-accent text-white font-semibold rounded-md hover:bg-primary/90 transition-colors flex gap-2 items-center justify-center"
-      >
-      </button> -->
-
       <button
         type="submit"
         class="cursor-pointer group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-accent px-6 font-medium text-neutral-200"
@@ -113,7 +105,6 @@ const { networks } = data;
       </p>
     </form>
     <div class="flex flex-col gap-8 mt-4">
-      <!-- Enhanced network icons with larger, more eye-catching boxes -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
         {
           networks.form.map(({ name, url, description, icon }) => {
@@ -125,12 +116,12 @@ const { networks } = data;
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={name}
-                  class="flex items-center gap-4 p-4  bg-secondary/20 rounded-xl  hover:shadow-sm transition-all duration-300 group-hover:scale-105"
+                  class="flex items-center gap-4 p-4 bg-secondary/20 rounded-xl  hover:shadow-sm transition-all duration-300 group-hover:scale-105"
                 >
-                  <div class="flex-shrink-0 w-12 h-12 from-secondary/20 to-accent/10 rounded-lg flex items-center justify-center group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300">
+                  <div class="flex-shrink-0 from-secondary/20 to-accent/10 rounded-lg flex items-center justify-center group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300">
                     <Icon color="#4c4d4c" size={24} />
                   </div>
-                  <div class="flex-1">
+                  <div class="flex-1 min-w-16">
                     <h3 class="font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                       {name}
                     </h3>
