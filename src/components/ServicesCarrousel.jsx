@@ -12,8 +12,8 @@ export default function ServicesCarousel() {
   const [activeService, setActiveService] = useState(null);
 
   return (
-    <section className="w-full mt-16 px-4">
-      <div className="grid grid-cols-1 gap-8 md:flex md:gap-40 ">
+    <section className="w-full mt-4 px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:flex lg:gap-28">
         {services.map((service, index) => (
           <div key={index} className="flex flex-col items-center">
             <div className="mb-6">
@@ -31,7 +31,7 @@ export default function ServicesCarousel() {
                 effect="cards"
                 grabCursor={true}
                 modules={[EffectCards]}
-                className="w-full h-[400px] md:h-[500px]"
+                className="w-72 h-[420px] md:w-full md:h-[500px]"
                 cardsEffect={{
                   slideShadows: true,
                   transformEl: null,
