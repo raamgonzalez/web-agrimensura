@@ -6,7 +6,6 @@ import About from './about.astro';
 import Projects from './projects.astro';
 import Services from './services.astro';
 import ContactIcon from '@/ui/ContactIcon.astro';
-import VideoHero from '@/components/VideoHero.astro';
 import TopographicBackground from '@/ui/TopographicBackground.astro';
 
 const marginTopNavigation = 'scroll-mt-48';
@@ -24,7 +23,7 @@ const marginTopNavigation = 'scroll-mt-48';
       <About />
     </div>
     <div id="services" class={`${marginTopNavigation} services`}>
-      <Services />
+      <Services client:load />
     </div>
     <div id="projects" class={`${marginTopNavigation}`}>
       <Projects />
