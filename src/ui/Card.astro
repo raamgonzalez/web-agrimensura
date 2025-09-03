@@ -1,11 +1,4 @@
 ---
-// export interface Props {
-//   content: string;
-//   subcontent: string;
-//   contentColor?: string;
-//   hoverColor?: string;
-// }
-
 const {
   content,
   subcontent,
@@ -17,13 +10,13 @@ const {
 <div
   class={`
   group relative overflow-hidden
-  bg-secondary/20 rounded-xl p-8
+  bg-muted/30 rounded-xl p-8
   border border-background
   transition-all duration-300 ease-in-out
   shadow-primary
-  hover:shadow-gray-200/50
+  hover:bg-muted/30
   hover:scale-105
-  active:shadow-gray-200/50
+  active:bg-muted/30
   active:scale-105
   hover:shadow-sm
   active:shadow-sm
@@ -34,7 +27,7 @@ const {
 >
   <!-- Background hover effect -->
   <div
-    class="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    class="absolute inset-0 bg-gradient-to-br to-muted/50 from-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
   >
   </div>
 
@@ -43,11 +36,13 @@ const {
     <!-- Main content -->
     <div
       class={`
-      text-5xl  md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4
+      text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4
       ${contentColor}
       transition-all duration-300
       group-hover:scale-110
       group-hover:text-orange-600
+      [text-shadow:0px_2px_1px_#d76c37bb]
+      text-shadow-muted
     `}
     >
       {content}
@@ -55,9 +50,9 @@ const {
 
     <!-- Subcontent -->
     <div
-      class="text-gray-600 font-medium
+      class="text-primary font-medium
       transition-all duration-300
-      group-hover:text-gray-800
+      group-hover:text-primary
       group-hover:translate-y-1"
     >
       {subcontent}

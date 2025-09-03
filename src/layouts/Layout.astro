@@ -16,7 +16,6 @@ const { title, description } = Astro.props;
   <body
     class="flex flex-col gap-mobile sm:gap-tablet md:gap-tablet sm:px-8 lg:px-40 px-4 py-4 relative"
   >
-    <!-- <TopographicBackground /> -->
     <Header />
     <slot />
     <Footer />
@@ -28,9 +27,6 @@ const { title, description } = Astro.props;
     margin: 0;
     width: 100%;
     min-height: 100dvh;
-    /* background-image: url("/public/background.png");
-		background-repeat: no-repeat;
-		background-size: cover; */
     font-family: 'Geist Variable', sans-serif;
     scroll-behavior: smooth;
   }

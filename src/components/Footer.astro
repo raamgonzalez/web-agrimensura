@@ -9,9 +9,9 @@ const { networks } = data;
 <footer class="">
   <div class="">
     <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-muted border-t border-b py-8"
+      class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-muted border-t border-b py-8 text-primary"
     >
-      <div class="flex justify-center md:justify-start hidden md:block">
+      <div class="justify-center md:justify-start hidden md:block">
         <Logo loading="lazy" />
       </div>
 
@@ -32,10 +32,10 @@ const { networks } = data;
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="w-10 h-10 border-b-1 text-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                class="w-10 h-10 shadow-xs text-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label={name}
               >
-                <Icon color="#4c4d4c" />
+                <Icon color="#d76c37" />
               </a>
             );
           })
@@ -43,7 +43,7 @@ const { networks } = data;
       </div>
     </div>
 
-    <div class="mt-8 text-center">
+    <div class="mt-8 text-center text-primary">
       <p class="text-sm font-inter">© 2025 Agrimensura DGA. Todos los derechos reservados.</p>
     </div>
   </div>

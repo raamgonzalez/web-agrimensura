@@ -18,14 +18,14 @@ const { networks } = data;
           for="fullName"
           class="text-sm font-medium text-foreground mb-1 flex items-center gap-2"
         >
-          <User color="#4c4d4c" size={20} />
+          <User color="#3ddc84" size={20} />
           <p>Nombre completo</p>
         </label>
         <input
           id="fullName"
           type="text"
           placeholder="Tu nombre y apellido"
-          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-accent-alt focus:border-accent-alt outline-none"
           required
         />
         <p id="fullName-error" class="text-sm text-red-500 hidden">Nombre completo requerido</p>
@@ -34,14 +34,14 @@ const { networks } = data;
       <!-- Email -->
       <div>
         <label for="email" class="text-sm font-medium text-foreground mb-1 flex items-center gap-2">
-          <Mail color="#4c4d4c" size={20} />
+          <Mail color="#3ddc84" size={20} />
           <p>Email</p>
         </label>
         <input
           id="email"
           type="email"
           placeholder="ejemplo@email.com"
-          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-accent-alt focus:border-accent-alt outline-none"
           required
         />
         <p id="email-error" class="text-sm text-red-500 hidden">Email inválido</p>
@@ -53,14 +53,14 @@ const { networks } = data;
           for="subject"
           class="text-sm font-medium text-foreground mb-1 flex items-center gap-2"
         >
-          <MessageCircle color="#4c4d4c" size={20} />
+          <MessageCircle color="#3ddc84" size={20} />
           <p>Asunto</p>
         </label>
         <input
           id="subject"
           type="text"
           placeholder="Asunto del mensaje"
-          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-accent-alt focus:border-accent-alt outline-none"
           required
         />
         <p id="subject-error" class="text-sm text-red-500 hidden">Asunto requerido</p>
@@ -73,7 +73,7 @@ const { networks } = data;
           id="message"
           rows="4"
           placeholder="Escribe tu mensaje..."
-          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+          class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-accent-alt focus:border-accent-alt outline-none"
           required></textarea>
         <p id="message-error" class="text-sm text-red-500 hidden">Mensaje requerido</p>
       </div>
@@ -83,7 +83,7 @@ const { networks } = data;
         <input
           id="terms"
           type="checkbox"
-          class="w-4 h-4 rounded border-primary text-primary focus:ring-0"
+          class="w-4 h-4 rounded border-accent-alt text-primary focus:ring-0"
           required
         />
         <label for="terms" class="text-sm text-foreground">Acepto los términos y condiciones</label>
@@ -100,7 +100,7 @@ const { networks } = data;
         <p>Enviar mensaje</p>
       </button>
       <p id="form-success" class="text-green-500 hidden mt-2">¡Mensaje enviado correctamente!</p>
-      <p id="form-fail" class="text-red-500 hidden mt-2">
+      <p id="form-fail" class="text-accent hidden mt-2">
         Error al enviar el mensaje. Intenta nuevamente.
       </p>
     </form>
@@ -116,10 +116,10 @@ const { networks } = data;
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={name}
-                  class="flex items-center gap-4 p-4 bg-secondary/20 rounded-xl hover:shadow-sm transition-all duration-300 group-hover:scale-105 relative"
+                  class="flex items-center gap-4 p-4 bg-muted/30 rounded-xl hover:shadow-sm transition-all duration-300 group-hover:scale-105 relative"
                 >
                   <div class="flex-shrink-0 from-secondary/20 to-accent/10 rounded-lg flex items-center justify-center group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300">
-                    <Icon color="#4c4d4c" size={24} />
+                    <Icon color="#d76c37" size={24} />
                   </div>
                   <div class="flex-1 min-w-16">
                     <h3 class="font-semibold text-foreground group-hover:text-primary transition-colors duration-300">

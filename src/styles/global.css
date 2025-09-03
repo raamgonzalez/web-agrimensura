@@ -4,14 +4,35 @@
 @source "../../node_modules/preline/dist/*.js";
 
 :root {
-  --background: #f8f9fa;
-  --foreground: #1e3a52;
-  --primary: #4c4d4c;
-  --muted-foreground: #6b7c6e;
-  --accent: #d76c37;
+  /* Base */
+  --background: #121212; /* Negro profundo */
+  --background-alt: #1a1a1a; /* Fondo alternativo */
+  --foreground: #e6e6e6; /* Texto principal */
+  --muted-foreground: #9a9a9a; /* Texto secundario */
+  --disabled: #555555; /* Elementos deshabilitados */
+
+  /* Accentos */
+  --accent: #ff6b35; /* Principal */
+  --accent-alt: #3ddc84; /* Secundario (verde topográfico) */
+
+  /* Bordes */
+  --border: #2a2a2a;
+  --border-strong: #444444;
+
+  /* Superficies */
+  --surface: #1f1f1f;
+  --surface-hover: #262626;
+  --surface-active: #333333;
+
+  /* Texto destacado */
+  --primary: #ffffff; /* Blanco puro */
+  --heading: #f5f5f5; /* Títulos */
+
+  /* Tipografía */
   --font-geist: 'Geist Variable';
   --font-inter: 'Inter Variable';
 
+  /* Titles */
   --title-web: 2.25rem; /* ~36px */
   --title-tablet: 1.8rem; /* ~29px */
   --title-mobile: 1.5rem; /* ~24px */
@@ -30,10 +51,22 @@
 @theme inline {
   /* Colors */
   --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
   --color-primary: var(--primary);
-  --color-accent: var(--accent);
-  --color-secondary: var(--foreground);
+  --color-heading: var(--heading);
+  --color-foreground: var(--foreground);
   --color-muted: var(--muted-foreground);
+  --color-disabled: var(--disabled);
+
+  --color-accent: var(--accent);
+  --color-accent-alt: var(--accent-alt);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-active: var(--surface-active);
 
   /* Font */
   --font-geist: var(--font-geist), sans-serif;
@@ -54,9 +87,8 @@
   --gap-tablet: var(--gap-tablet);
   --gap-mobile: var(--gap-mobile);
 }
+
 @layer base {
-  * {
-  }
   body {
     @apply bg-background font-geist;
   }
@@ -91,12 +123,10 @@
     from {
       opacity: 0;
       width: 90%;
-      /* filter: blur(10px); */
     }
     to {
       opacity: 1;
       width: 100%;
-      /* filter: blur(0px); */
     }
   }
 }
