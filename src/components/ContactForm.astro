@@ -8,7 +8,6 @@ const { networks } = data;
 ---
 
 <div class="flex flex-col gap-4 md:gap-8">
-  <!-- <h2 class="text-2xl font-semibold mb-6 text-left text-secondary">Contáctanos</h2> -->
   <TitleAndText title="Contáctanos" />
   <div class="flex flex-col md:flex-row gap-16 text-primary px-4">
     <form id="contact-form" class="space-y-4 flex-1 max-w-[800px] min-w-[300px]">
@@ -23,6 +22,7 @@ const { networks } = data;
         </label>
         <input
           id="fullName"
+          name="from_name"
           type="text"
           placeholder="Tu nombre y apellido"
           class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-accent-alt focus:border-accent-alt outline-none"
@@ -39,6 +39,7 @@ const { networks } = data;
         </label>
         <input
           id="email"
+          name="from_email"
           type="email"
           placeholder="ejemplo@email.com"
           class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-accent-alt focus:border-accent-alt outline-none"
@@ -58,6 +59,7 @@ const { networks } = data;
         </label>
         <input
           id="subject"
+          name="subject"
           type="text"
           placeholder="Asunto del mensaje"
           class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-accent-alt focus:border-accent-alt outline-none"
@@ -71,6 +73,7 @@ const { networks } = data;
         <label for="message" class="block text-sm font-medium text-foreground mb-1">Mensaje</label>
         <textarea
           id="message"
+          name="message"
           rows="4"
           placeholder="Escribe tu mensaje..."
           class="pl-3 pr-3 py-2 w-full border rounded-md focus:ring-2 focus:ring-accent-alt focus:border-accent-alt outline-none"
@@ -89,21 +92,42 @@ const { networks } = data;
         <label for="terms" class="text-sm text-foreground">Acepto los términos y condiciones</label>
         <p id="terms-error" class="text-sm text-red-500 hidden">Debes aceptar los términos</p>
       </div>
+
       <button
+        id="submit-btn"
         type="submit"
-        class="cursor-pointer group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-accent px-6 font-medium text-neutral-200"
-        ><div
+        class="cursor-pointer group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-accent px-6 font-medium text-neutral-200 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        <div
           class="mr-0 w-0 -translate-x-[100%] opacity-0 transition-all duration-200 group-hover:mr-1 group-hover:w-5 group-hover:translate-x-0 group-hover:opacity-100"
         >
           <Send size={16} />
         </div>
-        <p>Enviar mensaje</p>
+        <span id="btn-text">Enviar mensaje</span>
+        <div id="loading-spinner" class="hidden ml-2">
+          <svg
+            class="animate-spin h-4 w-4 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"
+            ></circle>
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
+          </svg>
+        </div>
       </button>
+
       <p id="form-success" class="text-green-500 hidden mt-2">¡Mensaje enviado correctamente!</p>
       <p id="form-fail" class="text-accent hidden mt-2">
         Error al enviar el mensaje. Intenta nuevamente.
       </p>
     </form>
+
     <div class="flex flex-col gap-8 mt-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
         {
@@ -138,11 +162,29 @@ const { networks } = data;
   </div>
 </div>
 
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
+  const EMAIL_SERVICE_ID = 'service_y2vx0xh';
+  const EMAIL_TEMPLATE_ID = 'template_ukg2jet';
+  const EMAIL_PUBLIC_KEY = 'JxHOv_HbdaiJjZJ1e';
+
+  emailjs.init(EMAIL_PUBLIC_KEY);
+
   const form = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const btnText = document.getElementById('btn-text');
+  const loadingSpinner = document.getElementById('loading-spinner');
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    // Deshabilitar botón y mostrar loading
+    submitBtn.disabled = true;
+    btnText.textContent = 'Enviando...';
+    loadingSpinner.classList.remove('hidden');
 
     // Reset errores y bordes
     document.querySelectorAll('#contact-form input, #contact-form textarea').forEach((el) => {
@@ -154,23 +196,24 @@ const { networks } = data;
     document.getElementById('form-success').classList.add('hidden');
     document.getElementById('form-fail').classList.add('hidden');
 
-    const fullName = form.fullName.value.trim();
-    const email = form.email.value.trim();
+    const fullName = form.from_name.value.trim();
+    const email = form.from_email.value.trim();
     const subject = form.subject.value.trim();
     const message = form.message.value.trim();
     const terms = form.terms.checked;
 
     let valid = true;
 
+    // Validaciones
     if (!fullName) {
       document.getElementById('fullName-error').classList.remove('hidden');
-      form.fullName.classList.add('border-red-500');
+      form.from_name.classList.add('border-red-500');
       valid = false;
     }
 
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       document.getElementById('email-error').classList.remove('hidden');
-      form.email.classList.add('border-red-500');
+      form.from_email.classList.add('border-red-500');
       valid = false;
     }
 
@@ -191,24 +234,28 @@ const { networks } = data;
       valid = false;
     }
 
-    if (!valid) return;
+    if (!valid) {
+      // Rehabilitar botón si hay errores
+      submitBtn.disabled = false;
+      btnText.textContent = 'Enviar mensaje';
+      loadingSpinner.classList.add('hidden');
+      return;
+    }
 
-    // Enviar datos a tu endpoint
+    // Enviar email con EmailJS
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fullName, email, subject, message }),
-      });
-
-      if (res.ok) {
-        document.getElementById('form-success').classList.remove('hidden');
-        form.reset();
-      } else {
-        document.getElementById('form-fail').classList.remove('hidden');
-      }
-    } catch (err) {
+      const result = await emailjs.sendForm(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, form);
+      console.log('Email enviado:', result);
+      document.getElementById('form-success').classList.remove('hidden');
+      form.reset();
+    } catch (error) {
+      console.error('Error enviando email:', error);
       document.getElementById('form-fail').classList.remove('hidden');
+    } finally {
+      // Rehabilitar botón
+      submitBtn.disabled = false;
+      btnText.textContent = 'Enviar mensaje';
+      loadingSpinner.classList.add('hidden');
     }
   });
 </script>
