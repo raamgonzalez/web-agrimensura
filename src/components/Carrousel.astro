@@ -17,7 +17,7 @@ const { projects } = data;
               <Image
                 src={project.src}
                 alt={project.alt}
-                class="w-full h-full rounded-4xl object-cover"
+                class="image__carrousel w-full h-full object-cover object-top object-center"
                 inferSize={true}
                 loading="eager"
               />
@@ -131,6 +131,10 @@ const { projects } = data;
   </script>
 
   <style is:global>
+    .image__carrousel {
+      border-radius: 2rem;
+    }
+
     .astro-swiper .swiper-wrapper {
       display: flex !important;
       align-items: stretch;

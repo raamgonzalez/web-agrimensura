@@ -62,31 +62,31 @@ export const data = {
           name: 'Estados parcelarios',
           description:
             'Documentación técnica que certifica el estado actual de una parcela, sus límites y características legales y catastrales.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/SsH118Sv/estados-parcelarios.webp',
         },
         {
           name: 'Georreferenciaciones',
           description:
             'Determinación de la ubicación precisa de un inmueble mediante coordenadas geográficas oficiales, cumpliendo normativas vigentes.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/gk3cDHz1/georeferenciaciones.webp',
         },
         {
-          name: 'División en propiedad horizontal',
+          name: 'Subdivisión de PH',
           description:
             'Proceso de subdivisión de un inmueble en unidades funcionales independientes bajo el régimen de propiedad horizontal.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/JzK6VS7J/subdivision-ph.webp',
         },
         {
           name: 'Mensura para usucapión',
           description:
             'Levantamiento y plano técnico necesario para trámites judiciales de prescripción adquisitiva (usucapión).',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/VLQHjjHS/mensura-usucapion.webp',
         },
         {
           name: 'Subdivisiones rurales y urbanas',
           description:
             'División técnica de terrenos en áreas rurales y urbanas conforme a las normativas municipales y provinciales.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/hGjCSMhY/subdivisiones-rurales-urbanas.webp',
         },
       ],
     },
@@ -97,31 +97,31 @@ export const data = {
           name: 'Enrases',
           description:
             'Determinación y materialización de niveles de referencia para obras de construcción y urbanización.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/x8HxwCqT/enrases.webp',
         },
         {
           name: 'Relevamientos planialtimétricos',
           description:
             'Medición detallada del terreno considerando su relieve (altimetría) y dimensiones planas (planimetría) para proyectos urbanos.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/Hk4GJSYs/relevamientos-planialtimetricos.webp',
         },
         {
           name: 'Estados parcelarios',
           description:
             'Certificación catastral de los límites y estado de una parcela en el ámbito de la Ciudad Autónoma de Buenos Aires.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/SsH118Sv/estados-parcelarios.webp',
         },
         {
           name: 'Mensuras particulares',
           description:
             'Levantamiento técnico de los límites y características de un inmueble para su correcta individualización y documentación.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/3rDc4L95/mensuras-particulares.webp',
         },
         {
-          name: 'Subdivisión en propiedad horizontal',
+          name: 'Subdivisión de PH',
           description:
-            'Proceso técnico para dividir un inmueble en unidades funcionales independientes bajo el régimen de propiedad horizontal, cumpliendo normativas vigentes.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+            'Proceso técnico para dividir un inmueble en unidades funcionales independientes bajo el régimen de propiedad horizontal.',
+          url: 'https://i.postimg.cc/JzK6VS7J/subdivision-ph.webp',
         },
       ],
     },
@@ -132,49 +132,43 @@ export const data = {
           name: 'Replanteo y seguimiento de obra',
           description:
             'Ubicación y materialización en el terreno de los ejes y niveles de un proyecto de obra, con monitoreo técnico durante su ejecución.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/6pBjPBKt/replanteo-seguimiento-obra.webp',
         },
         {
           name: 'Relevamientos planialtimétricos',
           description:
             'Medición integral de dimensiones y altitudes del terreno, necesaria para proyectos rurales y urbanos en la provincia.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/Hk4GJSYs/relevamientos-planialtimetricos.webp',
         },
         {
           name: 'Modelos digitales de terreno',
           description:
             'Generación de representaciones digitales 3D del relieve del terreno para análisis topográficos y de ingeniería.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/bNxVLsKm/modelos-digitales.webp',
         },
         {
           name: 'Vuelos fotogramétricos',
           description:
             'Captura aérea de imágenes georreferenciadas para obtener información precisa del terreno y generar ortofotos.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/Gp5X9Yym/vuelos-dron.webp',
         },
         {
-          name: 'Mensuras y división rurales y urbanas',
+          name: 'Subdivisiones rurales y urbanas',
           description:
-            'Planos técnicos y subdivisiones de terrenos en áreas urbanas y rurales conforme a la legislación provincial.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+            'División técnica de terrenos en áreas rurales y urbanas conforme a las normativas municipales y provinciales.',
+          url: 'https://i.postimg.cc/hGjCSMhY/subdivisiones-rurales-urbanas.webp',
         },
         {
           name: 'Deslinde y amojonamiento',
           description:
             'Marcación física de límites de una propiedad en el terreno mediante colocación de mojones y referencias permanentes.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/fLVgv5Nd/deslinde-amojonamiento.webp',
         },
         {
-          name: 'Mensura y división rural y urbana',
-          description:
-            'Trabajos de mensura para individualizar y dividir parcelas en zonas urbanas y rurales, cumpliendo normativas vigentes.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
-        },
-        {
-          name: 'División en propiedad horizontal',
+          name: 'Subdivisión de PH',
           description:
             'Proceso técnico para subdividir edificaciones en unidades independientes bajo régimen de propiedad horizontal en Río Negro.',
-          url: 'https://imgs.search.brave.com/NXkvbqVQ8qszq2d_Gi-LmVa6Tg-UynEkKJ1rJNxta5A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YWdyaW1lbnN1cmFz/dXIuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L2FncmltZW5zdXJh/c3VyMjAucG5n',
+          url: 'https://i.postimg.cc/JzK6VS7J/subdivision-ph.webp',
         },
       ],
     },
