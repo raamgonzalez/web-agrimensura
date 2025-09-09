@@ -62,31 +62,31 @@ export const data = {
           name: 'Estados parcelarios',
           description:
             'Documentación técnica que certifica el estado actual de una parcela, sus límites y características legales y catastrales.',
-          url: 'https://i.postimg.cc/SsH118Sv/estados-parcelarios.webp',
+          url: 'https://i.postimg.cc/Px0q7yFZ/estados-parcelarios-3-11zon.webp',
         },
         {
           name: 'Georreferenciaciones',
           description:
             'Determinación de la ubicación precisa de un inmueble mediante coordenadas geográficas oficiales, cumpliendo normativas vigentes.',
-          url: 'https://i.postimg.cc/gk3cDHz1/georeferenciaciones.webp',
+          url: 'https://i.postimg.cc/02YNtpGM/georeferenciaciones-4-11zon.webp',
         },
         {
           name: 'Subdivisión de PH',
           description:
             'Proceso de subdivisión de un inmueble en unidades funcionales independientes bajo el régimen de propiedad horizontal.',
-          url: 'https://i.postimg.cc/JzK6VS7J/subdivision-ph.webp',
+          url: 'https://i.postimg.cc/zvDx9wbz/subdivision-ph-10-11zon.webp',
         },
         {
           name: 'Mensura para usucapión',
           description:
             'Levantamiento y plano técnico necesario para trámites judiciales de prescripción adquisitiva (usucapión).',
-          url: 'https://i.postimg.cc/VLQHjjHS/mensura-usucapion.webp',
+          url: 'https://i.postimg.cc/vZXZybNG/mensura-usucapion-5-11zon.webp',
         },
         {
           name: 'Subdivisiones rurales y urbanas',
           description:
             'División técnica de terrenos en áreas rurales y urbanas conforme a las normativas municipales y provinciales.',
-          url: 'https://i.postimg.cc/hGjCSMhY/subdivisiones-rurales-urbanas.webp',
+          url: 'https://i.postimg.cc/WbH5Hk2V/subdivisiones-rurales-urbanas-11-11zon.webp',
         },
       ],
     },
@@ -97,31 +97,31 @@ export const data = {
           name: 'Enrases',
           description:
             'Determinación y materialización de niveles de referencia para obras de construcción y urbanización.',
-          url: 'https://i.postimg.cc/x8HxwCqT/enrases.webp',
+          url: 'https://i.postimg.cc/pTmTk4kR/enrases-2-11zon.webp',
         },
         {
           name: 'Relevamientos planialtimétricos',
           description:
             'Medición detallada del terreno considerando su relieve (altimetría) y dimensiones planas (planimetría) para proyectos urbanos.',
-          url: 'https://i.postimg.cc/Hk4GJSYs/relevamientos-planialtimetricos.webp',
+          url: 'https://i.postimg.cc/rs68jmKN/relevamientos-planialtimetricos-8-11zon.webp',
         },
         {
           name: 'Estados parcelarios',
           description:
             'Certificación catastral de los límites y estado de una parcela en el ámbito de la Ciudad Autónoma de Buenos Aires.',
-          url: 'https://i.postimg.cc/SsH118Sv/estados-parcelarios.webp',
+          url: 'https://i.postimg.cc/Px0q7yFZ/estados-parcelarios-3-11zon.webp',
         },
         {
           name: 'Mensuras particulares',
           description:
             'Levantamiento técnico de los límites y características de un inmueble para su correcta individualización y documentación.',
-          url: 'https://i.postimg.cc/3rDc4L95/mensuras-particulares.webp',
+          url: 'https://i.postimg.cc/cJH442pw/mensuras-particulares-6-11zon.webp',
         },
         {
           name: 'Subdivisión de PH',
           description:
             'Proceso técnico para dividir un inmueble en unidades funcionales independientes bajo el régimen de propiedad horizontal.',
-          url: 'https://i.postimg.cc/JzK6VS7J/subdivision-ph.webp',
+          url: 'https://i.postimg.cc/zvDx9wbz/subdivision-ph-10-11zon.webp',
         },
       ],
     },
@@ -132,43 +132,43 @@ export const data = {
           name: 'Replanteo y seguimiento de obra',
           description:
             'Ubicación y materialización en el terreno de los ejes y niveles de un proyecto de obra, con monitoreo técnico durante su ejecución.',
-          url: 'https://i.postimg.cc/6pBjPBKt/replanteo-seguimiento-obra.webp',
+          url: 'https://i.postimg.cc/RFLPsp0p/replanteo-seguimiento-obra-9-11zon.webp',
         },
         {
           name: 'Relevamientos planialtimétricos',
           description:
             'Medición integral de dimensiones y altitudes del terreno, necesaria para proyectos rurales y urbanos en la provincia.',
-          url: 'https://i.postimg.cc/Hk4GJSYs/relevamientos-planialtimetricos.webp',
+          url: 'https://i.postimg.cc/rs68jmKN/relevamientos-planialtimetricos-8-11zon.webp',
         },
         {
           name: 'Modelos digitales de terreno',
           description:
             'Generación de representaciones digitales 3D del relieve del terreno para análisis topográficos y de ingeniería.',
-          url: 'https://i.postimg.cc/bNxVLsKm/modelos-digitales.webp',
+          url: 'https://i.postimg.cc/jjFqWvT9/modelos-digitales-7-11zon.webp',
         },
         {
           name: 'Vuelos fotogramétricos',
           description:
             'Captura aérea de imágenes georreferenciadas para obtener información precisa del terreno y generar ortofotos.',
-          url: 'https://i.postimg.cc/Gp5X9Yym/vuelos-dron.webp',
+          url: 'https://i.postimg.cc/43CBJR7F/vuelos-dron-12-11zon.webp',
         },
         {
           name: 'Subdivisiones rurales y urbanas',
           description:
             'División técnica de terrenos en áreas rurales y urbanas conforme a las normativas municipales y provinciales.',
-          url: 'https://i.postimg.cc/hGjCSMhY/subdivisiones-rurales-urbanas.webp',
+          url: 'https://i.postimg.cc/WbH5Hk2V/subdivisiones-rurales-urbanas-11-11zon.webp',
         },
         {
           name: 'Deslinde y amojonamiento',
           description:
             'Marcación física de límites de una propiedad en el terreno mediante colocación de mojones y referencias permanentes.',
-          url: 'https://i.postimg.cc/fLVgv5Nd/deslinde-amojonamiento.webp',
+          url: 'https://i.postimg.cc/x1PcdKcD/deslinde-amojonamiento-1-11zon.webp',
         },
         {
           name: 'Subdivisión de PH',
           description:
             'Proceso técnico para subdividir edificaciones en unidades independientes bajo régimen de propiedad horizontal en Río Negro.',
-          url: 'https://i.postimg.cc/JzK6VS7J/subdivision-ph.webp',
+          url: 'https://i.postimg.cc/zvDx9wbz/subdivision-ph-10-11zon.webp',
         },
       ],
     },
