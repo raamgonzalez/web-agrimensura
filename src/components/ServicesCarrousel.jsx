@@ -57,11 +57,24 @@ export default function ServicesCarousel() {
                         </p>
 
                         <div className="flex-1 flex items-center justify-center">
-                          <img
-                            src={dataService.url}
-                            alt={dataService.name}
-                            className="w-full h-32 md:h-64 object-cover rounded-lg"
-                          />
+                          <picture>
+                            <source
+                              srcSet={`${dataService.url}?w=342&format=webp 1x, ${dataService.url}?w=684&format=webp 2x`}
+                              type="image/webp"
+                            />
+                            <source
+                              srcSet={`${dataService.url}?w=342 1x, ${dataService.url}?w=684 2x`}
+                              type="image/jpeg"
+                            />
+                            <img
+                              src={`${dataService.url}?w=342`}
+                              alt={dataService.name}
+                              className="w-full h-32 md:h-64 object-cover rounded-lg"
+                              loading="lazy"
+                              decoding="async"
+                              sizes="(max-width: 768px) 100vw, 342px"
+                            />
+                          </picture>
                         </div>
                       </div>
 
