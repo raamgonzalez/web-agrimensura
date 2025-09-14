@@ -1,7 +1,7 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
@@ -10,6 +10,15 @@ import { data } from '../data/data';
 export default function ServicesCarousel() {
   const { services } = data;
   const [activeService, setActiveService] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <section className="w-full mt-4 px-4">
@@ -58,7 +67,7 @@ export default function ServicesCarousel() {
 
                         <div className="flex-1 flex items-center justify-center">
                           <img
-                            src={dataService.url}
+                            src={isMobile ? dataService.urlMobile : dataService.urlWeb}
                             alt={dataService.name}
                             className="w-full h-32 md:h-64 object-cover rounded-lg"
                           />
