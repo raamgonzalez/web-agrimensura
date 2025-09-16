@@ -1,25 +1,27 @@
 import img01 from '../assets/images/01.png';
 import img02 from '../assets/images/02.png';
 import img03 from '../assets/images/03.png';
+import img04 from '../assets/images/04.png';
+import img05 from '../assets/images/05.png';
 import imgProfile from '../assets/profile.png';
 
 const networks = {
   instagram: {
     name: 'Instagram',
-    url: 'https://instagram.com/dga_agrimensura',
-    description: '@dga_agrimensura',
+    url: 'https://www.instagram.com/agrimensura.dga?utm_source=ig_web_button_share_sheet&igsh=cTE2ZnR5Mmh6YmE2',
+    description: '@agrimensura.dga',
     icon: 'instagram',
   },
   facebook: {
     name: 'Facebook',
-    url: 'https://facebook.com/dga.agrimensura',
+    url: 'https://www.facebook.com/profile.php?id=100063721591829',
     description: 'DGA Agrimensura',
     icon: 'facebook',
   },
   mail: {
     name: 'Email',
-    url: 'mailto:info@dga-agrimensura.com',
-    description: 'info@dga-agrimensura.com',
+    url: 'mailto:diegogonzaleza.1210@gmail.com',
+    description: 'diegogonzaleza.1210@gmail.com',
     icon: 'mail',
   },
   location: {
@@ -30,8 +32,8 @@ const networks = {
   },
   cell: {
     name: 'Celular',
-    url: 'https://api.whatsapp.com/send?phone=541155789343',
-    description: '+54 1155789343',
+    url: 'https://api.whatsapp.com/send?phone=5492345685353',
+    description: '+54 92345685353',
     icon: 'cell',
   },
 };
@@ -51,6 +53,16 @@ export const data = {
     {
       name: 'Instalación de Estación de Referencia',
       src: img03,
+      alt: 'Imagen nivelando estación GNSS para georreferenciación',
+    },
+    {
+      name: 'Instalación de Estación de Referencia',
+      src: img04,
+      alt: 'Imagen nivelando estación GNSS para georreferenciación',
+    },
+    {
+      name: 'Instalación de Estación de Referencia',
+      src: img05,
       alt: 'Imagen nivelando estación GNSS para georreferenciación',
     },
   ],

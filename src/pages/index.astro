@@ -11,7 +11,10 @@ import TopographicBackground from '@/ui/TopographicBackground.astro';
 const marginTopNavigation = 'scroll-mt-48';
 ---
 
-<Layout title="Agrimensura DGA">
+<Layout
+  title="Agrimensura DGA"
+  description="Servicios de agrimensura en Argentina: mensuras, estados parcelarios, levantamientos topográficos, georreferenciación y subdivisiones."
+>
   <main class="flex flex-col gap-mobile sm:gap-tablet md:gap-web">
     <TopographicBackground />
     <div id="init" class={marginTopNavigation}>
@@ -23,7 +26,7 @@ const marginTopNavigation = 'scroll-mt-48';
       <About />
     </div>
     <div id="services" class={`${marginTopNavigation} services`}>
-      <Services client:load />
+      <Services />
     </div>
     <div id="projects" class={`${marginTopNavigation}`}>
       <Projects />
