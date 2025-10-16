@@ -28,32 +28,32 @@ const { projects } = data;
     </div>
 
     <button
-      class="swiper-button-prev flex flex-col custom-swiper-btn group-hover:flex items-center justify-center text-primary w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-md absolute left-2 top-1/2 -translate-y-1/2 z-30"
+      class="swiper-button-prev flex custom-swiper-btn group-hover:flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full absolute left-2 top-1/2 -translate-y-1/2 z-30"
       aria-label="Anterior"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="w-5 h-5 sm:w-6 sm:h-6"
+        class="w-4 h-4 sm:w-5 sm:h-5 text-orange-500"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="oklch(0.65 0.15 45)"
-        stroke-width="2"
+        stroke="currentColor"
+        stroke-width="1.75"
       >
         <path stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"></path>
       </svg>
     </button>
 
     <button
-      class="swiper-button-next custom-swiper-btn hidden group-hover:flex items-center justify-center text-primary w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-md absolute right-2 top-1/2 -translate-y-1/2 z-30"
+      class="swiper-button-next custom-swiper-btn hidden group-hover:flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full absolute right-2 top-1/2 -translate-y-1/2 z-30"
       aria-label="Siguiente"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="w-5 h-5 sm:w-6 sm:h-6"
+        class="w-4 h-4 sm:w-5 sm:h-5 text-orange-500"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="oklch(0.65 0.15 45)"
-        stroke-width="2"
+        stroke="currentColor"
+        stroke-width="1.75"
       >
         <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6"></path>
       </svg>
@@ -151,6 +151,14 @@ const { projects } = data;
     .swiper-button-prev::after,
     .swiper-button-next::after {
       display: none !important;
+    }
+
+    .custom-swiper-btn {
+      border-radius: 9999px;
+    }
+    .custom-swiper-btn svg {
+      color: #f97316;
+      display: block;
     }
 
     .astro-swiper .swiper-pagination-bullet-active {

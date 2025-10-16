@@ -3,6 +3,7 @@ import img02 from '../assets/images/02.png';
 import img03 from '../assets/images/03.png';
 import img04 from '../assets/images/04.png';
 import img05 from '../assets/images/05.png';
+import img06 from '../assets/images/06.png';
 import imgProfile from '../assets/profile.png';
 
 const networks = {
@@ -41,29 +42,34 @@ const networks = {
 export const data = {
   projects: [
     {
-      name: 'Levantamiento Topográfico',
-      src: img01,
-      alt: 'Imagen de agrimensor midiendo terreno con estación total',
-    },
-    {
-      name: 'Curvas de Nivel y Planimetría',
-      src: img02,
-      alt: 'Imagen con curvas de nivel y trabajos de cartografía',
-    },
-    {
-      name: 'Instalación de Estación de Referencia',
-      src: img03,
-      alt: 'Imagen nivelando estación GNSS para georreferenciación',
-    },
-    {
-      name: 'Instalación de Estación de Referencia',
-      src: img04,
-      alt: 'Imagen nivelando estación GNSS para georreferenciación',
-    },
-    {
-      name: 'Instalación de Estación de Referencia',
+      name: 'Relevamiento planialtimétrico para mensura y división urbana',
       src: img05,
-      alt: 'Imagen nivelando estación GNSS para georreferenciación',
+      alt: 'Relevamiento planialtimétrico con estación total para mensura urbana sobre lote',
+    },
+    {
+      name: 'Estado parcelario Rural',
+      src: img01,
+      alt: 'Imagen de stado parcelario rural en terreno agrícola evaluado por agrimensor',
+    },
+    {
+      name: 'Relevamiento planialtimetrico',
+      src: img02,
+      alt: 'Agrimensor realizando relevamiento planialtimétrico con estación total en terreno',
+    },
+    {
+      name: 'Subdivision rural',
+      src: img03,
+      alt: 'Vista de loteo para subdivisión rural con límites parcelarios',
+    },
+    {
+      name: 'Mensura propiedad horizontal CABA',
+      src: img04,
+      alt: 'Agrimensor trabajando en levantamiento de PH en CABA',
+    },
+    {
+      name: 'Vuelo de dron para curvas de nivel',
+      src: img06,
+      alt: 'Captura aérea con dron para generar curvas de nivel mediante fotogrametría',
     },
   ],
   services: [
@@ -204,11 +210,11 @@ export const data = {
   ],
   about: {
     description:
-      'El Estudio DGA Agrimensura, radicado en Argentina, se especializa en levantamientos planialtimétricos, georreferenciación, cartografía y planificación de obras civiles y agrícolas. Contamos con tecnología de punta, como estaciones totales, GPS/GNSS y drones, para brindar información precisa y confiable a ingenieros, arquitectos y desarrolladores. Nuestro objetivo es acompañar cada proyecto desde el relevamiento inicial hasta la entrega de planos y datos geoespaciales, asegurando exactitud y eficiencia en cada trabajo.',
+      'El Estudio Agrimensura DGA, radicado en Argentina, se especializa en levantamientos planialtimétricos, georreferenciación, cartografía y planificación de obras civiles y agrícolas. Contamos con tecnología de punta, como estaciones totales, GPS/GNSS y drones, para brindar información precisa y confiable a ingenieros, arquitectos y desarrolladores. Nuestro objetivo es acompañar cada proyecto desde el relevamiento inicial hasta la entrega de planos y datos geoespaciales, asegurando exactitud y eficiencia en cada trabajo.',
     profile: {
-      name: 'Diego G. Arbizu',
+      name: 'Diego González A.',
       notes:
-        'Soy agrimensor especializado en levantamientos planialtimétricos, curvas de nivel y georreferenciación. Trabajo en campo y oficina, brindando información precisa para proyectos de construcción, agricultura y desarrollo urbano en Argentina.',
+        'Ingeniero Agrimensor, especializado en levantamientos planialtimétricos, curvas de nivel y georreferenciación. Trabajo en campo y en oficina, brindando información precisa para proyectos de construcción, agricultura y desarrollo urbano en Argentina.',
       src: imgProfile,
     },
   },
