@@ -1,7 +1,7 @@
-'use client';
+﻿'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
@@ -11,6 +11,7 @@ export default function ServicesCarousel() {
   const { services } = data;
   const [activeService, setActiveService] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const swiperRefs = useRef([]);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -22,7 +23,7 @@ export default function ServicesCarousel() {
 
   return (
     <section className="w-full mt-4 px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:flex lg:gap-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-28 xl:grid-cols-3">
         {services.map((service, index) => (
           <div key={index} className="flex flex-col items-center">
             <div className="mb-6">
@@ -35,15 +36,18 @@ export default function ServicesCarousel() {
               </h3>
             </div>
 
-            <div className="w-full max-w-sm">
+            <div className="w-full max-w-96 md:max-w-96 relative group">
               <Swiper
                 effect="cards"
                 grabCursor={true}
                 modules={[EffectCards]}
-                className="w-72 h-[420px] md:w-full md:h-[500px]"
+                className=" w-full"
                 cardsEffect={{
                   slideShadows: true,
                   transformEl: null,
+                }}
+                onSwiper={(swiper) => {
+                  swiperRefs.current[index] = swiper;
                 }}
               >
                 {service.service.map((dataService, serviceIndex) => (
@@ -69,18 +73,54 @@ export default function ServicesCarousel() {
                           <img
                             src={isMobile ? dataService.urlMobile : dataService.urlWeb}
                             alt={dataService.name}
-                            className="w-full h-32 md:h-64 object-cover rounded-lg"
+                            className="w-full h-32 md:h-64 object-cover rounded-lg object-center"
                           />
                         </div>
                       </div>
 
                       <button className="cursor-pointer mt-6 w-full bg-accent active:bg-accent/60 text-primary font-medium py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        <a href="#contact">Solicitar cotización</a>
+                        <a href="#contact">Solicitar cotizacion</a>
                       </button>
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
+
+              <button
+                type="button"
+                onClick={() => swiperRefs.current[index]?.slidePrev()}
+                className="swiper-button-prev flex items-center justify-center rounded-full absolute bg-white/5 top-1/2 -translate-x-6 -translate-y-1/2 z-30"
+                aria-label="Anterior"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 18l-6-6 6-6"></path>
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => swiperRefs.current[index]?.slideNext()}
+                className="swiper-button-next flex items-center justify-center rounded-full absolute bg-white/5 top-1/2 translate-x-6 -translate-y-1/2 z-30"
+                aria-label="Siguiente"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-8 h-8 sm:w-6 sm:h-6 text-orange-500"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6"></path>
+                </svg>
+              </button>
             </div>
           </div>
         ))}
