@@ -22,7 +22,7 @@ export default function ServicesCarousel() {
   }, []);
 
   return (
-    <section className="w-full mt-4 px-4">
+    <section className="w-full mt-4 px-4 ">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-28 xl:grid-cols-3">
         {services.map((service, index) => (
           <div key={index} className="flex flex-col items-center">
@@ -41,7 +41,7 @@ export default function ServicesCarousel() {
                 effect="cards"
                 grabCursor={true}
                 modules={[EffectCards]}
-                className=" w-full"
+                className=" w-full h-[550px]"
                 cardsEffect={{
                   slideShadows: true,
                   transformEl: null,

@@ -74,7 +74,7 @@ export const data = {
   ],
   services: [
     {
-      name: 'Provincia de Buenos Aires',
+      name: ' Buenos Aires',
       service: [
         {
           name: 'Estados parcelarios',
