@@ -41,7 +41,7 @@ export default function ServicesCarousel() {
                 effect="cards"
                 grabCursor={true}
                 modules={[EffectCards]}
-                className=" w-full h-[550px]"
+                className=" w-full lg:h-[550px]"
                 cardsEffect={{
                   slideShadows: true,
                   transformEl: null,
