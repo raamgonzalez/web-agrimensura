@@ -26,7 +26,7 @@ export default function ServicesCarousel() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-28 xl:grid-cols-3">
         {services.map((service, index) => (
           <div key={index} className="flex flex-col items-center">
-            <div className="mb-6">
+            <div className="mb-6 flex flex-row gap-4 items-center">
               <h3
                 className={`text-2xl font-bold text-center text-heading relative transition-all duration-300 ${
                   activeService === index ? 'after:w-full' : 'after:w-0'
@@ -34,6 +34,9 @@ export default function ServicesCarousel() {
               >
                 {service.name}
               </h3>
+              {service.matricula && (
+                <p className="text-xl text-center text-primary/80 ">Mat. N° {service.matricula}</p>
+              )}
             </div>
 
             <div className="w-full max-w-96 md:max-w-96 relative group">
