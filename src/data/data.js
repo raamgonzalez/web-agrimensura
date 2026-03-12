@@ -46,14 +46,14 @@ const networks = {
 export const data = {
   projects: [
     {
-      name: 'Relevamiento planialtimetrico con GPS mensura y subdivisión urbano',
+      name: 'Relevamiento planialtimetrico con GPS mensura y subdivisión ',
       src: img08,
-      alt: 'Relevamiento planialtimetrico con GPS mensura y subdivisión urbano',
+      alt: 'Relevamiento planialtimetrico con GPS mensura y subdivisión ',
     },
     {
-      name: 'Relevamiento con Estacion total para confección de plano mensura para Usucapion',
+      name: 'Relevamiento con Estacion total para plano mensura para usucapion',
       src: img07,
-      alt: 'Relevamiento con Estacion total para confección de plano mensura para Usucapion',
+      alt: 'Relevamiento con Estacion total para plano mensura para usucapion',
     },   
     {
       name: 'Mensura para deslinde y amojonamiento',
