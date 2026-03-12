@@ -13,11 +13,11 @@ const { projects } = data;
         projects.map((project) => (
           <div class="swiper-slide hs-carousel-slide relative" key={project.name}>
             <ChipProyecto name={project.name} />
-            <div class="flex justify-center h-[300px] sm:h-[400px] md:h-[500px] lg:h-[500px] xl:h-[800px] w-full">
+            <div class="flex justify-center h-[300px] sm:h-[400px] md:h-[500px] lg:h-[500px] xl:h-[1000px] w-full">
               <Image
                 src={project.src}
                 alt={project.alt}
-                class="image__carrousel w-full h-full object-cover object-top object-top"
+                class="image__carrousel w-full h-full object-cover object-center"
                 inferSize={true}
                 loading="eager"
               />
